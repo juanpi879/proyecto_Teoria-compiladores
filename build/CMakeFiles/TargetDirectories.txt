@@ -1,0 +1,10 @@
+/compilers/prog_kids/build/CMakeFiles/intrinsics_gen.dir
+/compilers/prog_kids/build/CMakeFiles/vt_gen.dir
+/compilers/prog_kids/build/CMakeFiles/omp_gen.dir
+/compilers/prog_kids/build/CMakeFiles/acc_gen.dir
+/compilers/prog_kids/build/CMakeFiles/ARMTargetParserTableGen.dir
+/compilers/prog_kids/build/CMakeFiles/AArch64TargetParserTableGen.dir
+/compilers/prog_kids/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/compilers/prog_kids/build/CMakeFiles/prog_kids.dir
+/compilers/prog_kids/build/CMakeFiles/edit_cache.dir
+/compilers/prog_kids/build/CMakeFiles/rebuild_cache.dir
