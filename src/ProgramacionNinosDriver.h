@@ -73,11 +73,66 @@ public:
 
     // Implementación del visitor para expresiones (solo números por ahora)
     std::any visitExpresion(ProgramacionNinosParser::ExpresionContext *ctx) override {
-        if (ctx->INT()) { // Si la expresión es un número entero
+        if (ctx->INT()) { // Manejar números enteros
             int value = std::stoi(ctx->INT()->getText());
             return static_cast<Value*>(ConstantFP::get(context, APFloat(static_cast<float>(value))));
         }
+
+        if (ctx->STRING()) { // Manejar cadenas de texto
+            std::string strValue = ctx->STRING()->getText(); // Incluye las comillas
+            // Elimina las comillas del string
+            strValue = strValue.substr(1, strValue.length() - 2);
+            return strValue;
+        }
+
+        if (ctx->ID()) { // Manejar identificadores (variables)
+            std::string varName = ctx->ID()->getText();
+            if (sym.count(varName)) {
+                return sym[varName];
+            } else {
+                std::cerr << "Error: Variable '" << varName << "' no definida.\n";
+                return nullptr;
+            }
+        }
+
         std::cerr << "Error: Expresion no reconocida o no implementada.\n";
         return nullptr;
     }
+
+    // Implementación del visitor para la impresión
+    std::any visitImprimir(ProgramacionNinosParser::ImprimirContext *ctx) override {
+        std::cout << "Visitando Imprimir" << std::endl;
+
+        auto val = visit(ctx->expresion());
+
+        if (!val.has_value()) {
+            std::cerr << "Error: Expresión nula en imprimir.\n";
+            return nullptr;
+        }
+
+        // Determinar el tipo de valor a imprimir
+        if (auto floatVal = std::any_cast<Value*>(&val); floatVal != nullptr) {
+            // Caso de número (float o INT manejado como float)
+            Function *printFunc = cast<Function>(module->getOrInsertFunction(
+                "print", FunctionType::get(Type::getVoidTy(context), {Type::getFloatTy(context)}, false)
+            ).getCallee());
+            builder.CreateCall(printFunc, {*floatVal});
+        } else if (auto stringVal = std::any_cast<std::string>(&val); stringVal != nullptr) {
+            // Caso de STRING
+            Function *printStringFunc = cast<Function>(module->getOrInsertFunction(
+                "printString", FunctionType::get(Type::getVoidTy(context), {PointerType::get(Type::getInt8Ty(context), 0)}, false)
+            ).getCallee());
+            Value *strPtr = builder.CreateGlobalString(*stringVal);
+            builder.CreateCall(printStringFunc, {strPtr});
+        } else {
+            std::cerr << "Error: Tipo de expresión no soportado en imprimir.\n";
+            return nullptr;
+        }
+
+        return nullptr;
+    }
+
+    
+
+
 };
