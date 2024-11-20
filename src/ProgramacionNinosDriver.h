@@ -17,6 +17,7 @@ using namespace llvm;
 class ProgramacionNinosDriver : public ProgramacionNinosBaseVisitor {
 private:
     map<string, Value*> sym;
+    map<string, GlobalVariable*> stringCache;
     LLVMContext context;
     std::unique_ptr<Module> module;
     IRBuilder<> builder;
@@ -99,6 +100,19 @@ public:
             }
         }
 
+        if (ctx->getText().find("no") != std::string::npos) { // Manejar "no"
+            std::cout << "Visitando expresión con 'no'" << std::endl;
+
+            auto operand = std::any_cast<Value*>(visit(ctx->expresion(0))); // Obtener el operando
+            if (!operand) {
+                std::cerr << "Error: Operando nulo en negación lógica.\n";
+                return ConstantInt::get(Type::getInt1Ty(context), 0); // Fallback a falso
+            }
+
+            return builder.CreateNot(operand, "nottmp"); // Crear la negación lógica
+        }
+
+
         std::cerr << "Error: Expresion no reconocida o no implementada.\n";
         return nullptr;
     }
@@ -106,7 +120,6 @@ public:
     // Implementación del visitor para la impresión
     std::any visitImprimir(ProgramacionNinosParser::ImprimirContext *ctx) override {
         std::cout << "Visitando Imprimir" << std::endl;
-
         auto val = visit(ctx->expresion());
 
         if (!val.has_value()) {
@@ -114,19 +127,32 @@ public:
             return nullptr;
         }
 
-        // Determinar el tipo de valor a imprimir
         if (auto floatVal = std::any_cast<Value*>(&val); floatVal != nullptr) {
-            // Caso de número (float o INT manejado como float)
+            // Imprimir números
             Function *printFunc = cast<Function>(module->getOrInsertFunction(
                 "print", FunctionType::get(Type::getVoidTy(context), {Type::getFloatTy(context)}, false)
             ).getCallee());
             builder.CreateCall(printFunc, {*floatVal});
         } else if (auto stringVal = std::any_cast<std::string>(&val); stringVal != nullptr) {
-            // Caso de STRING
+            // Imprimir cadenas con caché
+            GlobalVariable *strVar = nullptr;
+            if (stringCache.find(*stringVal) == stringCache.end()) {
+                // Crear una nueva cadena en caché si no existe
+                auto *strType = ArrayType::get(Type::getInt8Ty(context), stringVal->size() + 1);
+                strVar = new GlobalVariable(
+                    *module, strType, true, GlobalValue::PrivateLinkage, 
+                    ConstantDataArray::getString(context, *stringVal), "str"
+                );
+                stringCache[*stringVal] = strVar;
+            } else {
+                // Reutilizar la cadena del caché
+                strVar = stringCache[*stringVal];
+            }
+
             Function *printStringFunc = cast<Function>(module->getOrInsertFunction(
                 "printString", FunctionType::get(Type::getVoidTy(context), {PointerType::get(Type::getInt8Ty(context), 0)}, false)
             ).getCallee());
-            Value *strPtr = builder.CreateGlobalString(*stringVal);
+            Value *strPtr = builder.CreateBitCast(strVar, PointerType::get(Type::getInt8Ty(context), 0));
             builder.CreateCall(printStringFunc, {strPtr});
         } else {
             std::cerr << "Error: Tipo de expresión no soportado en imprimir.\n";
@@ -162,6 +188,102 @@ public:
             return nullptr;
         }
     }
+
+    std::any visitCondicional(ProgramacionNinosParser::CondicionalContext *ctx) override {
+        std::cout << "Visitando Condicional" << std::endl;
+
+        // Evaluar la condición
+        Value *condVal = std::any_cast<Value*>(visit(ctx->condicion()));
+        if (!condVal) {
+            std::cerr << "Error: Condición no válida.\n";
+            return nullptr;
+        }
+
+        // Crear bloques básicos para "si", "sino" (opcional) y "fin del condicional"
+        Function *currentFunction = builder.GetInsertBlock()->getParent();
+        BasicBlock *thenBlock = BasicBlock::Create(context, "then", currentFunction);
+        BasicBlock *elseBlock = (ctx->instruccion().size() > 1) 
+            ? BasicBlock::Create(context, "else", currentFunction) 
+            : nullptr;
+        BasicBlock *endBlock = BasicBlock::Create(context, "endif", currentFunction);
+
+        // Generar instrucción de bifurcación condicional
+        builder.CreateCondBr(condVal, thenBlock, elseBlock ? elseBlock : endBlock);
+
+        // Generar el bloque "then"
+        builder.SetInsertPoint(thenBlock);
+        visit(ctx->instruccion(0));  // Procesar solo las instrucciones del bloque "si"
+        builder.CreateBr(endBlock);
+
+        // Generar el bloque "else" si existe
+        if (elseBlock) {
+            builder.SetInsertPoint(elseBlock);
+            visit(ctx->instruccion(1));  // Procesar solo las instrucciones del bloque "sino"
+            builder.CreateBr(endBlock);
+        }
+
+        // Generar el bloque "endif"
+        builder.SetInsertPoint(endBlock);
+
+        return nullptr;
+    }
+
+
+    std::any visitCondicion(ProgramacionNinosParser::CondicionContext *ctx) override {
+        std::cout << "Visitando Condicion" << std::endl;
+
+        if (ctx->expresion().size() == 2) { // Comparación binaria
+            Value *lhs = std::any_cast<Value*>(visit(ctx->expresion(0)));
+            Value *rhs = std::any_cast<Value*>(visit(ctx->expresion(1)));
+
+            if (!lhs || !rhs) {
+                std::cerr << "Error: Expresiones inválidas en la condición binaria.\n";
+                return ConstantInt::get(Type::getInt1Ty(context), 0);
+            }
+
+            if (ctx->getText().find("==") != std::string::npos) {
+                return builder.CreateFCmpOEQ(lhs, rhs, "eqtmp");
+            } else if (ctx->getText().find("!=") != std::string::npos) {
+                return builder.CreateFCmpONE(lhs, rhs, "netmp");
+            } else if (ctx->getText().find("<") != std::string::npos) {
+                return builder.CreateFCmpOLT(lhs, rhs, "lttmp");
+            } else if (ctx->getText().find(">") != std::string::npos) {
+                return builder.CreateFCmpOGT(lhs, rhs, "gttmp");
+            } else if (ctx->getText().find("<=") != std::string::npos) {
+                return builder.CreateFCmpOLE(lhs, rhs, "letmp");
+            } else if (ctx->getText().find(">=") != std::string::npos) {
+                return builder.CreateFCmpOGE(lhs, rhs, "getmp");
+            }
+        } else if (ctx->condicion().size() == 2) { // Operadores lógicos
+            Value *lhs = std::any_cast<Value*>(visit(ctx->condicion(0)));
+            Value *rhs = std::any_cast<Value*>(visit(ctx->condicion(1)));
+
+            if (!lhs || !rhs) {
+                std::cerr << "Error: Subcondiciones inválidas en operación lógica.\n";
+                return ConstantInt::get(Type::getInt1Ty(context), 0);
+            }
+
+            if (ctx->getText().find("y") != std::string::npos) {
+                return builder.CreateAnd(lhs, rhs, "andtmp");
+            } else if (ctx->getText().find("o") != std::string::npos) {
+                return builder.CreateOr(lhs, rhs, "ortmp");
+            }
+        } else if (ctx->getText().find("no") != std::string::npos) { // Negación
+            std::cout << "Visitando negación lógica con 'no'" << std::endl;
+            Value *operand = std::any_cast<Value*>(visit(ctx->condicion(0)));
+            if (!operand) {
+                std::cerr << "Error: Operando nulo en negación lógica.\n";
+                return ConstantInt::get(Type::getInt1Ty(context), 0);
+            }
+            return builder.CreateNot(operand, "nottmp");
+        }
+
+        std::cerr << "Error: Condición no reconocida o no implementada.\n";
+        return ConstantInt::get(Type::getInt1Ty(context), 0);
+    }
+
+
+ 
 
 
     

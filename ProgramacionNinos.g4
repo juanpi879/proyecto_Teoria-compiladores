@@ -65,7 +65,7 @@ condicion
     | expresion ('==' | '!=' ) STRING // Comparación de cadenas
     | condicion 'y' condicion
     | condicion 'o' condicion
-    | 'no' condicion
+    | 'no' '('condicion')'
     | 'cualquier' // Nuevo: Comodín para cualquier valor
     ;
 
