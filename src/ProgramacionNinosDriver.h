@@ -77,7 +77,11 @@ public:
             int value = std::stoi(ctx->INT()->getText());
             return static_cast<Value*>(ConstantFP::get(context, APFloat(static_cast<float>(value))));
         }
-
+        
+        if (auto funcMathCtx = ctx->funcionMatematica()) { // Si es una función matemática
+        return visit(funcMathCtx);
+        }
+        
         if (ctx->STRING()) { // Manejar cadenas de texto
             std::string strValue = ctx->STRING()->getText(); // Incluye las comillas
             // Elimina las comillas del string
@@ -131,6 +135,34 @@ public:
 
         return nullptr;
     }
+
+    std::any visitFuncionMatematica(ProgramacionNinosParser::FuncionMatematicaContext *ctx) override {
+        std::cout << "Visitando FuncionMatematica" << std::endl;
+
+        // Evaluar las dos expresiones dentro de la función matemática
+        Value *lhs = std::any_cast<Value*>(visit(ctx->expresion(0)));
+        Value *rhs = std::any_cast<Value*>(visit(ctx->expresion(1)));
+
+        if (!lhs || !rhs) {
+            std::cerr << "Error: Una de las expresiones en la función matemática no es válida.\n";
+            return nullptr;
+        }
+
+        // Determinar qué operación ejecutar
+        if (ctx->getText().find("sumar") != std::string::npos) {
+            return builder.CreateFAdd(lhs, rhs, "sumartmp");
+        } else if (ctx->getText().find("restar") != std::string::npos) {
+            return builder.CreateFSub(lhs, rhs, "restartmp");
+        } else if (ctx->getText().find("multiplicar") != std::string::npos) {
+            return builder.CreateFMul(lhs, rhs, "multiplicartmp");
+        } else if (ctx->getText().find("dividir") != std::string::npos) {
+            return builder.CreateFDiv(lhs, rhs, "dividirtmp");
+        } else {
+            std::cerr << "Error: Operación matemática no reconocida.\n";
+            return nullptr;
+        }
+    }
+
 
     
 

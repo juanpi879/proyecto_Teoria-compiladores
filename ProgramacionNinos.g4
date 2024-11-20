@@ -56,6 +56,7 @@ expresion
     | expresion 'o' expresion    // Operadores lógicos
     | 'no' expresion             // Nuevo: Negación
     | accesoArreglo
+    | funcionMatematica
     ;
 
 // Condiciones

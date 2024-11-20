@@ -1,2 +1,6 @@
-variable x = 5 
-imprimir(x)
+variable x = 10 
+variable z = 5
+imprimir(sumar(x, z))
+imprimir(restar(x, z))
+imprimir(multiplicar(x, z))
+imprimir(dividir(x, z))

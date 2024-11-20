@@ -239,6 +239,7 @@ public:
     std::vector<ExpresionContext *> expresion();
     ExpresionContext* expresion(size_t i);
     AccesoArregloContext *accesoArreglo();
+    FuncionMatematicaContext *funcionMatematica();
 
 
     virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
