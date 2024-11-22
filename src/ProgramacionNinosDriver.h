@@ -59,32 +59,21 @@ public:
         std::cout << "Visitando Asignacion para la variable: " << varName << std::endl;
 
         auto val = visit(ctx->expresion());
-        if (val.type() == typeid(Value*)) {
-            std::cout << "Valor asignado es de tipo Value* (numérico).\n";
-        } else if (val.type() == typeid(GlobalVariable*)) {
-            std::cout << "Valor asignado es de tipo GlobalVariable* (cadena).\n";
-        } else {
-            std::cerr << "Error: Tipo inesperado en la asignación de " << varName << ".\n";
+        if (!val.has_value()) {
+            std::cerr << "Error: Expresión no válida para la asignación.\n";
+            return nullptr;
         }
 
         if (auto floatVal = std::any_cast<Value*>(&val); floatVal != nullptr) {
-            // Si es un número
             sym[varName] = *floatVal;
             std::cout << "Asignación completada (número) para " << varName << std::endl;
-        } else if (auto strVar = std::any_cast<GlobalVariable*>(&val); strVar != nullptr) {
-            // Si es una cadena
-            sym[varName] = *strVar;
-            std::cout << "Asignación completada (cadena) para " << varName << std::endl;
         } else {
-            std::cerr << "Error: Tipo de expresión no soportado para la asignación de " << varName << std::endl;
+            std::cerr << "Error: Tipo no soportado para la asignación.\n";
             return nullptr;
         }
 
         return nullptr;
     }
-
-
- 
 
     // Implementación del visitor para expresiones (solo números por ahora)
     std::any visitExpresion(ProgramacionNinosParser::ExpresionContext *ctx) override {
@@ -123,6 +112,31 @@ public:
                 return sym[varName];
             } else {
                 std::cerr << "Error: Variable '" << varName << "' no definida.\n";
+                return nullptr;
+            }
+        }
+
+        if (ctx->expresion().size() == 2) {
+            // Manejar operaciones aritméticas binarias
+            Value *lhs = std::any_cast<Value*>(visit(ctx->expresion(0)));
+            Value *rhs = std::any_cast<Value*>(visit(ctx->expresion(1)));
+
+            if (!lhs || !rhs) {
+                std::cerr << "Error: Operandos inválidos en la operación aritmética.\n";
+                return nullptr;
+            }
+
+            std::string op = ctx->getText();
+            if (ctx->getText().find("+") != std::string::npos) {
+                return builder.CreateFAdd(lhs, rhs, "addtmp");
+            } else if (ctx->getText().find("-") != std::string::npos) {
+                return builder.CreateFSub(lhs, rhs, "subtmp");
+            } else if (ctx->getText().find("*") != std::string::npos) {
+                return builder.CreateFMul(lhs, rhs, "multmp");
+            } else if (ctx->getText().find("/") != std::string::npos) {
+                return builder.CreateFDiv(lhs, rhs, "divtmp");
+            } else {
+                std::cerr << "Error: Operador aritmético no reconocido.\n";
                 return nullptr;
             }
         }
@@ -320,6 +334,73 @@ public:
 
         std::cerr << "Error: Condición no reconocida o no implementada.\n";
         return ConstantInt::get(Type::getInt1Ty(context), 0);
+    }
+
+    std::any visitBucleMientras(ProgramacionNinosParser::BucleMientrasContext *ctx) override {
+        std::cout << "Visitando bucle mientras" << std::endl;
+
+        Function *currentFunction = builder.GetInsertBlock()->getParent();
+
+        BasicBlock *condBlock = BasicBlock::Create(context, "while.cond", currentFunction);
+        BasicBlock *bodyBlock = BasicBlock::Create(context, "while.body", currentFunction);
+        BasicBlock *endBlock = BasicBlock::Create(context, "while.end", currentFunction);
+
+        builder.CreateBr(condBlock);
+        builder.SetInsertPoint(condBlock);
+        Value *condVal = std::any_cast<Value*>(visit(ctx->condicion()));
+        if (!condVal) {
+            std::cerr << "Error: Condición no válida en 'mientras'.\n";
+            return nullptr;
+        }
+        builder.CreateCondBr(condVal, bodyBlock, endBlock);
+
+        builder.SetInsertPoint(bodyBlock);
+        for (auto instruccion : ctx->instruccion()) {
+            visit(instruccion);
+        }
+        builder.CreateBr(condBlock);
+
+        builder.SetInsertPoint(endBlock);
+
+        std::cout << "Bucle 'mientras' procesado correctamente." << std::endl;
+        return nullptr;
+    }
+
+
+    std::any visitSegun(ProgramacionNinosParser::SegunContext *ctx) override {
+        std::cout << "Visitando sentencia 'segun'" << std::endl;
+        auto valor = visit(ctx->expresion());
+        bool casoEjecutado = false;
+        for (auto caso : ctx->caso()) {
+            auto valorCaso = visit(caso->expresion());
+            if (valor.type() == valorCaso.type()) {
+                if (valor.type() == typeid(int) &&
+                    std::any_cast<int>(valor) == std::any_cast<int>(valorCaso)) {
+                    std::cout << "Caso coincidente encontrado (int)." << std::endl;
+                    for (auto instruccion : caso->instruccion()) {
+                        visit(instruccion);
+                    }
+                    casoEjecutado = true;
+                    break; // Salimos tras ejecutar el primer caso válido
+                } else if (valor.type() == typeid(std::string) &&
+                        std::any_cast<std::string>(valor) == std::any_cast<std::string>(valorCaso)) {
+                    std::cout << "Caso coincidente encontrado (string)." << std::endl;
+                    for (auto instruccion : caso->instruccion()) {
+                        visit(instruccion);
+                    }
+                    casoEjecutado = true;
+                    break; // Salimos tras ejecutar el primer caso válido
+                }
+            }
+        }
+        if (!casoEjecutado && ctx->children.back()->getText() == "defecto") {
+            std::cout << "Ejecutando bloque 'defecto'" << std::endl;
+            for (auto instruccion : ctx->children.back()->children) {
+                visit(instruccion);
+            }
+        }
+        std::cout << "Finalizó sentencia 'segun'" << std::endl;
+        return nullptr;
     }
 
 

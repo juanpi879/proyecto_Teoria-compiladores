@@ -78,139 +78,141 @@ void programacionninosParserInitialize() {
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,65,404,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+  	4,1,65,408,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
   	7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,
   	14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,
   	21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,1,0,4,0,54,8,0,11,0,12,0,55,
   	1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-  	1,1,1,1,1,1,1,1,1,3,1,80,8,1,1,2,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,3,
-  	1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,5,5,102,8,5,10,5,12,5,105,9,5,
-  	1,5,1,5,1,5,1,5,5,5,111,8,5,10,5,12,5,114,9,5,1,5,3,5,117,8,5,1,6,1,6,
-  	1,6,1,6,1,6,1,6,5,6,125,8,6,10,6,12,6,128,9,6,1,6,1,6,1,7,1,7,1,7,1,7,
-  	1,7,1,7,5,7,138,8,7,10,7,12,7,141,9,7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,8,
-  	1,8,1,8,1,8,1,8,5,8,155,8,8,10,8,12,8,158,9,8,1,8,1,8,1,9,1,9,1,9,1,9,
-  	1,9,1,9,1,9,1,9,1,9,1,9,3,9,172,8,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,
-  	9,5,9,183,8,9,10,9,12,9,186,9,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,
-  	10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,3,10,203,8,10,1,10,1,10,1,10,1,
-  	10,1,10,1,10,5,10,211,8,10,10,10,12,10,214,9,10,1,11,1,11,1,11,1,11,1,
-  	11,1,11,3,11,222,8,11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,
-  	12,5,12,234,8,12,10,12,12,12,237,9,12,3,12,239,8,12,1,12,1,12,1,13,1,
-  	13,1,13,1,13,3,13,247,8,13,1,13,1,13,1,13,5,13,252,8,13,10,13,12,13,255,
-  	9,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,3,14,265,8,14,1,14,1,14,
-  	1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,16,1,16,1,16,1,16,1,17,1,17,
-  	1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,5,17,291,8,17,10,17,12,17,294,
-  	9,17,3,17,296,8,17,1,17,1,17,1,18,1,18,1,18,1,18,1,18,1,19,1,19,1,19,
-  	1,19,1,19,1,19,5,19,311,8,19,10,19,12,19,314,9,19,1,19,1,19,1,19,1,19,
-  	5,19,320,8,19,10,19,12,19,323,9,19,1,19,3,19,326,8,19,3,19,328,8,19,1,
-  	19,1,19,1,20,1,20,1,20,1,20,5,20,336,8,20,10,20,12,20,339,9,20,1,21,1,
-  	21,1,22,1,22,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,23,1,
-  	23,3,23,357,8,23,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,
-  	24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,
-  	24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,
-  	24,1,24,3,24,399,8,24,1,25,1,25,1,25,1,25,0,2,18,20,26,0,2,4,6,8,10,12,
-  	14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,0,3,1,0,16,20,
-  	1,0,24,29,1,0,24,25,440,0,53,1,0,0,0,2,79,1,0,0,0,4,81,1,0,0,0,6,86,1,
-  	0,0,0,8,91,1,0,0,0,10,95,1,0,0,0,12,118,1,0,0,0,14,131,1,0,0,0,16,144,
-  	1,0,0,0,18,171,1,0,0,0,20,202,1,0,0,0,22,215,1,0,0,0,24,228,1,0,0,0,26,
-  	242,1,0,0,0,28,258,1,0,0,0,30,271,1,0,0,0,32,276,1,0,0,0,34,280,1,0,0,
-  	0,36,299,1,0,0,0,38,304,1,0,0,0,40,331,1,0,0,0,42,340,1,0,0,0,44,342,
-  	1,0,0,0,46,356,1,0,0,0,48,398,1,0,0,0,50,400,1,0,0,0,52,54,3,2,1,0,53,
-  	52,1,0,0,0,54,55,1,0,0,0,55,53,1,0,0,0,55,56,1,0,0,0,56,57,1,0,0,0,57,
-  	58,5,0,0,1,58,1,1,0,0,0,59,80,3,4,2,0,60,80,3,6,3,0,61,80,3,10,5,0,62,
-  	80,3,12,6,0,63,80,3,14,7,0,64,80,3,16,8,0,65,80,3,34,17,0,66,80,3,36,
-  	18,0,67,80,3,26,13,0,68,80,3,30,15,0,69,80,3,32,16,0,70,80,3,28,14,0,
-  	71,80,3,24,12,0,72,80,3,38,19,0,73,80,3,42,21,0,74,80,3,44,22,0,75,80,
-  	3,8,4,0,76,80,3,46,23,0,77,80,3,48,24,0,78,80,3,50,25,0,79,59,1,0,0,0,
-  	79,60,1,0,0,0,79,61,1,0,0,0,79,62,1,0,0,0,79,63,1,0,0,0,79,64,1,0,0,0,
-  	79,65,1,0,0,0,79,66,1,0,0,0,79,67,1,0,0,0,79,68,1,0,0,0,79,69,1,0,0,0,
-  	79,70,1,0,0,0,79,71,1,0,0,0,79,72,1,0,0,0,79,73,1,0,0,0,79,74,1,0,0,0,
-  	79,75,1,0,0,0,79,76,1,0,0,0,79,77,1,0,0,0,79,78,1,0,0,0,80,3,1,0,0,0,
-  	81,82,5,1,0,0,82,83,5,59,0,0,83,84,5,2,0,0,84,85,3,18,9,0,85,5,1,0,0,
-  	0,86,87,5,3,0,0,87,88,5,4,0,0,88,89,3,18,9,0,89,90,5,5,0,0,90,7,1,0,0,
-  	0,91,92,5,6,0,0,92,93,5,4,0,0,93,94,5,5,0,0,94,9,1,0,0,0,95,96,5,7,0,
-  	0,96,97,5,4,0,0,97,98,3,20,10,0,98,99,5,5,0,0,99,103,5,8,0,0,100,102,
-  	3,2,1,0,101,100,1,0,0,0,102,105,1,0,0,0,103,101,1,0,0,0,103,104,1,0,0,
-  	0,104,106,1,0,0,0,105,103,1,0,0,0,106,116,5,9,0,0,107,108,5,10,0,0,108,
-  	112,5,8,0,0,109,111,3,2,1,0,110,109,1,0,0,0,111,114,1,0,0,0,112,110,1,
-  	0,0,0,112,113,1,0,0,0,113,115,1,0,0,0,114,112,1,0,0,0,115,117,5,9,0,0,
-  	116,107,1,0,0,0,116,117,1,0,0,0,117,11,1,0,0,0,118,119,5,11,0,0,119,120,
-  	5,4,0,0,120,121,3,18,9,0,121,122,5,5,0,0,122,126,5,8,0,0,123,125,3,2,
-  	1,0,124,123,1,0,0,0,125,128,1,0,0,0,126,124,1,0,0,0,126,127,1,0,0,0,127,
-  	129,1,0,0,0,128,126,1,0,0,0,129,130,5,9,0,0,130,13,1,0,0,0,131,132,5,
-  	12,0,0,132,133,5,4,0,0,133,134,3,20,10,0,134,135,5,5,0,0,135,139,5,8,
-  	0,0,136,138,3,2,1,0,137,136,1,0,0,0,138,141,1,0,0,0,139,137,1,0,0,0,139,
-  	140,1,0,0,0,140,142,1,0,0,0,141,139,1,0,0,0,142,143,5,9,0,0,143,15,1,
-  	0,0,0,144,145,5,13,0,0,145,146,5,4,0,0,146,147,3,4,2,0,147,148,5,63,0,
-  	0,148,149,3,20,10,0,149,150,5,63,0,0,150,151,3,4,2,0,151,152,5,5,0,0,
-  	152,156,5,8,0,0,153,155,3,2,1,0,154,153,1,0,0,0,155,158,1,0,0,0,156,154,
-  	1,0,0,0,156,157,1,0,0,0,157,159,1,0,0,0,158,156,1,0,0,0,159,160,5,9,0,
-  	0,160,17,1,0,0,0,161,162,6,9,-1,0,162,172,5,60,0,0,163,172,5,61,0,0,164,
-  	172,5,14,0,0,165,172,5,15,0,0,166,172,5,59,0,0,167,168,5,23,0,0,168,172,
-  	3,18,9,3,169,172,3,36,18,0,170,172,3,48,24,0,171,161,1,0,0,0,171,163,
-  	1,0,0,0,171,164,1,0,0,0,171,165,1,0,0,0,171,166,1,0,0,0,171,167,1,0,0,
-  	0,171,169,1,0,0,0,171,170,1,0,0,0,172,184,1,0,0,0,173,174,10,6,0,0,174,
-  	175,7,0,0,0,175,183,3,18,9,7,176,177,10,5,0,0,177,178,5,21,0,0,178,183,
-  	3,18,9,6,179,180,10,4,0,0,180,181,5,22,0,0,181,183,3,18,9,5,182,173,1,
-  	0,0,0,182,176,1,0,0,0,182,179,1,0,0,0,183,186,1,0,0,0,184,182,1,0,0,0,
-  	184,185,1,0,0,0,185,19,1,0,0,0,186,184,1,0,0,0,187,188,6,10,-1,0,188,
-  	189,3,18,9,0,189,190,7,1,0,0,190,191,3,18,9,0,191,203,1,0,0,0,192,193,
-  	3,18,9,0,193,194,7,2,0,0,194,195,5,61,0,0,195,203,1,0,0,0,196,197,5,23,
-  	0,0,197,198,5,4,0,0,198,199,3,20,10,0,199,200,5,5,0,0,200,203,1,0,0,0,
-  	201,203,5,30,0,0,202,187,1,0,0,0,202,192,1,0,0,0,202,196,1,0,0,0,202,
-  	201,1,0,0,0,203,212,1,0,0,0,204,205,10,4,0,0,205,206,5,21,0,0,206,211,
-  	3,20,10,5,207,208,10,3,0,0,208,209,5,22,0,0,209,211,3,20,10,4,210,204,
-  	1,0,0,0,210,207,1,0,0,0,211,214,1,0,0,0,212,210,1,0,0,0,212,213,1,0,0,
-  	0,213,21,1,0,0,0,214,212,1,0,0,0,215,216,5,31,0,0,216,217,5,59,0,0,217,
-  	221,5,4,0,0,218,219,5,59,0,0,219,220,5,32,0,0,220,222,5,59,0,0,221,218,
-  	1,0,0,0,221,222,1,0,0,0,222,223,1,0,0,0,223,224,5,5,0,0,224,225,5,8,0,
-  	0,225,226,3,2,1,0,226,227,5,9,0,0,227,23,1,0,0,0,228,229,5,59,0,0,229,
-  	238,5,4,0,0,230,235,3,18,9,0,231,232,5,32,0,0,232,234,3,18,9,0,233,231,
-  	1,0,0,0,234,237,1,0,0,0,235,233,1,0,0,0,235,236,1,0,0,0,236,239,1,0,0,
-  	0,237,235,1,0,0,0,238,230,1,0,0,0,238,239,1,0,0,0,239,240,1,0,0,0,240,
-  	241,5,5,0,0,241,25,1,0,0,0,242,243,5,33,0,0,243,246,5,59,0,0,244,245,
-  	5,34,0,0,245,247,5,59,0,0,246,244,1,0,0,0,246,247,1,0,0,0,247,248,1,0,
-  	0,0,248,253,5,8,0,0,249,252,3,4,2,0,250,252,3,28,14,0,251,249,1,0,0,0,
-  	251,250,1,0,0,0,252,255,1,0,0,0,253,251,1,0,0,0,253,254,1,0,0,0,254,256,
-  	1,0,0,0,255,253,1,0,0,0,256,257,5,9,0,0,257,27,1,0,0,0,258,259,5,31,0,
-  	0,259,260,5,59,0,0,260,264,5,4,0,0,261,262,5,59,0,0,262,263,5,32,0,0,
-  	263,265,5,59,0,0,264,261,1,0,0,0,264,265,1,0,0,0,265,266,1,0,0,0,266,
-  	267,5,5,0,0,267,268,5,8,0,0,268,269,3,2,1,0,269,270,5,9,0,0,270,29,1,
-  	0,0,0,271,272,5,35,0,0,272,273,5,59,0,0,273,274,5,4,0,0,274,275,5,5,0,
-  	0,275,31,1,0,0,0,276,277,5,59,0,0,277,278,5,36,0,0,278,279,5,59,0,0,279,
-  	33,1,0,0,0,280,281,5,37,0,0,281,282,5,59,0,0,282,283,5,38,0,0,283,284,
-  	5,60,0,0,284,285,5,39,0,0,285,286,5,2,0,0,286,295,5,8,0,0,287,292,3,18,
-  	9,0,288,289,5,32,0,0,289,291,3,18,9,0,290,288,1,0,0,0,291,294,1,0,0,0,
-  	292,290,1,0,0,0,292,293,1,0,0,0,293,296,1,0,0,0,294,292,1,0,0,0,295,287,
-  	1,0,0,0,295,296,1,0,0,0,296,297,1,0,0,0,297,298,5,9,0,0,298,35,1,0,0,
-  	0,299,300,5,59,0,0,300,301,5,38,0,0,301,302,3,18,9,0,302,303,5,39,0,0,
-  	303,37,1,0,0,0,304,305,5,40,0,0,305,306,5,4,0,0,306,307,3,18,9,0,307,
-  	308,5,5,0,0,308,312,5,8,0,0,309,311,3,40,20,0,310,309,1,0,0,0,311,314,
-  	1,0,0,0,312,310,1,0,0,0,312,313,1,0,0,0,313,327,1,0,0,0,314,312,1,0,0,
-  	0,315,325,5,41,0,0,316,326,3,2,1,0,317,321,5,8,0,0,318,320,3,2,1,0,319,
-  	318,1,0,0,0,320,323,1,0,0,0,321,319,1,0,0,0,321,322,1,0,0,0,322,324,1,
-  	0,0,0,323,321,1,0,0,0,324,326,5,9,0,0,325,316,1,0,0,0,325,317,1,0,0,0,
-  	326,328,1,0,0,0,327,315,1,0,0,0,327,328,1,0,0,0,328,329,1,0,0,0,329,330,
-  	5,9,0,0,330,39,1,0,0,0,331,332,5,42,0,0,332,333,3,18,9,0,333,337,5,43,
-  	0,0,334,336,3,2,1,0,335,334,1,0,0,0,336,339,1,0,0,0,337,335,1,0,0,0,337,
-  	338,1,0,0,0,338,41,1,0,0,0,339,337,1,0,0,0,340,341,5,44,0,0,341,43,1,
-  	0,0,0,342,343,5,45,0,0,343,45,1,0,0,0,344,345,5,46,0,0,345,346,5,59,0,
-  	0,346,347,5,47,0,0,347,357,3,18,9,0,348,349,5,48,0,0,349,350,5,59,0,0,
-  	350,351,5,49,0,0,351,357,3,18,9,0,352,353,5,50,0,0,353,357,5,59,0,0,354,
-  	355,5,51,0,0,355,357,5,59,0,0,356,344,1,0,0,0,356,348,1,0,0,0,356,352,
-  	1,0,0,0,356,354,1,0,0,0,357,47,1,0,0,0,358,359,5,52,0,0,359,360,5,4,0,
-  	0,360,361,3,18,9,0,361,362,5,32,0,0,362,363,3,18,9,0,363,364,5,5,0,0,
-  	364,399,1,0,0,0,365,366,5,53,0,0,366,367,5,4,0,0,367,368,3,18,9,0,368,
-  	369,5,32,0,0,369,370,3,18,9,0,370,371,5,5,0,0,371,399,1,0,0,0,372,373,
-  	5,54,0,0,373,374,5,4,0,0,374,375,3,18,9,0,375,376,5,32,0,0,376,377,3,
-  	18,9,0,377,378,5,5,0,0,378,399,1,0,0,0,379,380,5,55,0,0,380,381,5,4,0,
-  	0,381,382,3,18,9,0,382,383,5,32,0,0,383,384,3,18,9,0,384,385,5,5,0,0,
-  	385,399,1,0,0,0,386,387,5,56,0,0,387,388,5,4,0,0,388,389,3,18,9,0,389,
-  	390,5,32,0,0,390,391,3,18,9,0,391,392,5,5,0,0,392,399,1,0,0,0,393,394,
-  	5,57,0,0,394,395,5,4,0,0,395,396,3,18,9,0,396,397,5,5,0,0,397,399,1,0,
-  	0,0,398,358,1,0,0,0,398,365,1,0,0,0,398,372,1,0,0,0,398,379,1,0,0,0,398,
-  	386,1,0,0,0,398,393,1,0,0,0,399,49,1,0,0,0,400,401,5,58,0,0,401,402,5,
-  	61,0,0,402,51,1,0,0,0,30,55,79,103,112,116,126,139,156,171,182,184,202,
-  	210,212,221,235,238,246,251,253,264,292,295,312,321,325,327,337,356,398
+  	1,1,1,1,1,1,1,1,1,3,1,80,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,89,8,2,1,
+  	3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,5,5,106,8,5,
+  	10,5,12,5,109,9,5,1,5,1,5,1,5,1,5,5,5,115,8,5,10,5,12,5,118,9,5,1,5,3,
+  	5,121,8,5,1,6,1,6,1,6,1,6,1,6,1,6,5,6,129,8,6,10,6,12,6,132,9,6,1,6,1,
+  	6,1,7,1,7,1,7,1,7,1,7,1,7,5,7,142,8,7,10,7,12,7,145,9,7,1,7,1,7,1,8,1,
+  	8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,159,8,8,10,8,12,8,162,9,8,1,8,1,
+  	8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,176,8,9,1,9,1,9,1,9,1,9,
+  	1,9,1,9,1,9,1,9,1,9,5,9,187,8,9,10,9,12,9,190,9,9,1,10,1,10,1,10,1,10,
+  	1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,3,10,207,8,10,
+  	1,10,1,10,1,10,1,10,1,10,1,10,5,10,215,8,10,10,10,12,10,218,9,10,1,11,
+  	1,11,1,11,1,11,1,11,1,11,3,11,226,8,11,1,11,1,11,1,11,1,11,1,11,1,12,
+  	1,12,1,12,1,12,1,12,5,12,238,8,12,10,12,12,12,241,9,12,3,12,243,8,12,
+  	1,12,1,12,1,13,1,13,1,13,1,13,3,13,251,8,13,1,13,1,13,1,13,5,13,256,8,
+  	13,10,13,12,13,259,9,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,14,3,14,
+  	269,8,14,1,14,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,16,1,16,
+  	1,16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,5,17,295,
+  	8,17,10,17,12,17,298,9,17,3,17,300,8,17,1,17,1,17,1,18,1,18,1,18,1,18,
+  	1,18,1,19,1,19,1,19,1,19,1,19,1,19,5,19,315,8,19,10,19,12,19,318,9,19,
+  	1,19,1,19,1,19,1,19,5,19,324,8,19,10,19,12,19,327,9,19,1,19,3,19,330,
+  	8,19,3,19,332,8,19,1,19,1,19,1,20,1,20,1,20,1,20,5,20,340,8,20,10,20,
+  	12,20,343,9,20,1,21,1,21,1,22,1,22,1,23,1,23,1,23,1,23,1,23,1,23,1,23,
+  	1,23,1,23,1,23,1,23,1,23,3,23,361,8,23,1,24,1,24,1,24,1,24,1,24,1,24,
+  	1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,
+  	1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,1,24,
+  	1,24,1,24,1,24,1,24,1,24,1,24,3,24,403,8,24,1,25,1,25,1,25,1,25,0,2,18,
+  	20,26,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,
+  	46,48,50,0,3,1,0,16,20,1,0,24,29,1,0,24,25,445,0,53,1,0,0,0,2,79,1,0,
+  	0,0,4,88,1,0,0,0,6,90,1,0,0,0,8,95,1,0,0,0,10,99,1,0,0,0,12,122,1,0,0,
+  	0,14,135,1,0,0,0,16,148,1,0,0,0,18,175,1,0,0,0,20,206,1,0,0,0,22,219,
+  	1,0,0,0,24,232,1,0,0,0,26,246,1,0,0,0,28,262,1,0,0,0,30,275,1,0,0,0,32,
+  	280,1,0,0,0,34,284,1,0,0,0,36,303,1,0,0,0,38,308,1,0,0,0,40,335,1,0,0,
+  	0,42,344,1,0,0,0,44,346,1,0,0,0,46,360,1,0,0,0,48,402,1,0,0,0,50,404,
+  	1,0,0,0,52,54,3,2,1,0,53,52,1,0,0,0,54,55,1,0,0,0,55,53,1,0,0,0,55,56,
+  	1,0,0,0,56,57,1,0,0,0,57,58,5,0,0,1,58,1,1,0,0,0,59,80,3,4,2,0,60,80,
+  	3,6,3,0,61,80,3,10,5,0,62,80,3,12,6,0,63,80,3,14,7,0,64,80,3,16,8,0,65,
+  	80,3,34,17,0,66,80,3,36,18,0,67,80,3,26,13,0,68,80,3,30,15,0,69,80,3,
+  	32,16,0,70,80,3,28,14,0,71,80,3,24,12,0,72,80,3,38,19,0,73,80,3,42,21,
+  	0,74,80,3,44,22,0,75,80,3,8,4,0,76,80,3,46,23,0,77,80,3,48,24,0,78,80,
+  	3,50,25,0,79,59,1,0,0,0,79,60,1,0,0,0,79,61,1,0,0,0,79,62,1,0,0,0,79,
+  	63,1,0,0,0,79,64,1,0,0,0,79,65,1,0,0,0,79,66,1,0,0,0,79,67,1,0,0,0,79,
+  	68,1,0,0,0,79,69,1,0,0,0,79,70,1,0,0,0,79,71,1,0,0,0,79,72,1,0,0,0,79,
+  	73,1,0,0,0,79,74,1,0,0,0,79,75,1,0,0,0,79,76,1,0,0,0,79,77,1,0,0,0,79,
+  	78,1,0,0,0,80,3,1,0,0,0,81,82,5,1,0,0,82,83,5,59,0,0,83,84,5,2,0,0,84,
+  	89,3,18,9,0,85,86,5,59,0,0,86,87,5,2,0,0,87,89,3,18,9,0,88,81,1,0,0,0,
+  	88,85,1,0,0,0,89,5,1,0,0,0,90,91,5,3,0,0,91,92,5,4,0,0,92,93,3,18,9,0,
+  	93,94,5,5,0,0,94,7,1,0,0,0,95,96,5,6,0,0,96,97,5,4,0,0,97,98,5,5,0,0,
+  	98,9,1,0,0,0,99,100,5,7,0,0,100,101,5,4,0,0,101,102,3,20,10,0,102,103,
+  	5,5,0,0,103,107,5,8,0,0,104,106,3,2,1,0,105,104,1,0,0,0,106,109,1,0,0,
+  	0,107,105,1,0,0,0,107,108,1,0,0,0,108,110,1,0,0,0,109,107,1,0,0,0,110,
+  	120,5,9,0,0,111,112,5,10,0,0,112,116,5,8,0,0,113,115,3,2,1,0,114,113,
+  	1,0,0,0,115,118,1,0,0,0,116,114,1,0,0,0,116,117,1,0,0,0,117,119,1,0,0,
+  	0,118,116,1,0,0,0,119,121,5,9,0,0,120,111,1,0,0,0,120,121,1,0,0,0,121,
+  	11,1,0,0,0,122,123,5,11,0,0,123,124,5,4,0,0,124,125,3,18,9,0,125,126,
+  	5,5,0,0,126,130,5,8,0,0,127,129,3,2,1,0,128,127,1,0,0,0,129,132,1,0,0,
+  	0,130,128,1,0,0,0,130,131,1,0,0,0,131,133,1,0,0,0,132,130,1,0,0,0,133,
+  	134,5,9,0,0,134,13,1,0,0,0,135,136,5,12,0,0,136,137,5,4,0,0,137,138,3,
+  	20,10,0,138,139,5,5,0,0,139,143,5,8,0,0,140,142,3,2,1,0,141,140,1,0,0,
+  	0,142,145,1,0,0,0,143,141,1,0,0,0,143,144,1,0,0,0,144,146,1,0,0,0,145,
+  	143,1,0,0,0,146,147,5,9,0,0,147,15,1,0,0,0,148,149,5,13,0,0,149,150,5,
+  	4,0,0,150,151,3,4,2,0,151,152,5,63,0,0,152,153,3,20,10,0,153,154,5,63,
+  	0,0,154,155,3,4,2,0,155,156,5,5,0,0,156,160,5,8,0,0,157,159,3,2,1,0,158,
+  	157,1,0,0,0,159,162,1,0,0,0,160,158,1,0,0,0,160,161,1,0,0,0,161,163,1,
+  	0,0,0,162,160,1,0,0,0,163,164,5,9,0,0,164,17,1,0,0,0,165,166,6,9,-1,0,
+  	166,176,5,60,0,0,167,176,5,61,0,0,168,176,5,14,0,0,169,176,5,15,0,0,170,
+  	176,5,59,0,0,171,172,5,23,0,0,172,176,3,18,9,3,173,176,3,36,18,0,174,
+  	176,3,48,24,0,175,165,1,0,0,0,175,167,1,0,0,0,175,168,1,0,0,0,175,169,
+  	1,0,0,0,175,170,1,0,0,0,175,171,1,0,0,0,175,173,1,0,0,0,175,174,1,0,0,
+  	0,176,188,1,0,0,0,177,178,10,6,0,0,178,179,7,0,0,0,179,187,3,18,9,7,180,
+  	181,10,5,0,0,181,182,5,21,0,0,182,187,3,18,9,6,183,184,10,4,0,0,184,185,
+  	5,22,0,0,185,187,3,18,9,5,186,177,1,0,0,0,186,180,1,0,0,0,186,183,1,0,
+  	0,0,187,190,1,0,0,0,188,186,1,0,0,0,188,189,1,0,0,0,189,19,1,0,0,0,190,
+  	188,1,0,0,0,191,192,6,10,-1,0,192,193,3,18,9,0,193,194,7,1,0,0,194,195,
+  	3,18,9,0,195,207,1,0,0,0,196,197,3,18,9,0,197,198,7,2,0,0,198,199,5,61,
+  	0,0,199,207,1,0,0,0,200,201,5,23,0,0,201,202,5,4,0,0,202,203,3,20,10,
+  	0,203,204,5,5,0,0,204,207,1,0,0,0,205,207,5,30,0,0,206,191,1,0,0,0,206,
+  	196,1,0,0,0,206,200,1,0,0,0,206,205,1,0,0,0,207,216,1,0,0,0,208,209,10,
+  	4,0,0,209,210,5,21,0,0,210,215,3,20,10,5,211,212,10,3,0,0,212,213,5,22,
+  	0,0,213,215,3,20,10,4,214,208,1,0,0,0,214,211,1,0,0,0,215,218,1,0,0,0,
+  	216,214,1,0,0,0,216,217,1,0,0,0,217,21,1,0,0,0,218,216,1,0,0,0,219,220,
+  	5,31,0,0,220,221,5,59,0,0,221,225,5,4,0,0,222,223,5,59,0,0,223,224,5,
+  	32,0,0,224,226,5,59,0,0,225,222,1,0,0,0,225,226,1,0,0,0,226,227,1,0,0,
+  	0,227,228,5,5,0,0,228,229,5,8,0,0,229,230,3,2,1,0,230,231,5,9,0,0,231,
+  	23,1,0,0,0,232,233,5,59,0,0,233,242,5,4,0,0,234,239,3,18,9,0,235,236,
+  	5,32,0,0,236,238,3,18,9,0,237,235,1,0,0,0,238,241,1,0,0,0,239,237,1,0,
+  	0,0,239,240,1,0,0,0,240,243,1,0,0,0,241,239,1,0,0,0,242,234,1,0,0,0,242,
+  	243,1,0,0,0,243,244,1,0,0,0,244,245,5,5,0,0,245,25,1,0,0,0,246,247,5,
+  	33,0,0,247,250,5,59,0,0,248,249,5,34,0,0,249,251,5,59,0,0,250,248,1,0,
+  	0,0,250,251,1,0,0,0,251,252,1,0,0,0,252,257,5,8,0,0,253,256,3,4,2,0,254,
+  	256,3,28,14,0,255,253,1,0,0,0,255,254,1,0,0,0,256,259,1,0,0,0,257,255,
+  	1,0,0,0,257,258,1,0,0,0,258,260,1,0,0,0,259,257,1,0,0,0,260,261,5,9,0,
+  	0,261,27,1,0,0,0,262,263,5,31,0,0,263,264,5,59,0,0,264,268,5,4,0,0,265,
+  	266,5,59,0,0,266,267,5,32,0,0,267,269,5,59,0,0,268,265,1,0,0,0,268,269,
+  	1,0,0,0,269,270,1,0,0,0,270,271,5,5,0,0,271,272,5,8,0,0,272,273,3,2,1,
+  	0,273,274,5,9,0,0,274,29,1,0,0,0,275,276,5,35,0,0,276,277,5,59,0,0,277,
+  	278,5,4,0,0,278,279,5,5,0,0,279,31,1,0,0,0,280,281,5,59,0,0,281,282,5,
+  	36,0,0,282,283,5,59,0,0,283,33,1,0,0,0,284,285,5,37,0,0,285,286,5,59,
+  	0,0,286,287,5,38,0,0,287,288,5,60,0,0,288,289,5,39,0,0,289,290,5,2,0,
+  	0,290,299,5,8,0,0,291,296,3,18,9,0,292,293,5,32,0,0,293,295,3,18,9,0,
+  	294,292,1,0,0,0,295,298,1,0,0,0,296,294,1,0,0,0,296,297,1,0,0,0,297,300,
+  	1,0,0,0,298,296,1,0,0,0,299,291,1,0,0,0,299,300,1,0,0,0,300,301,1,0,0,
+  	0,301,302,5,9,0,0,302,35,1,0,0,0,303,304,5,59,0,0,304,305,5,38,0,0,305,
+  	306,3,18,9,0,306,307,5,39,0,0,307,37,1,0,0,0,308,309,5,40,0,0,309,310,
+  	5,4,0,0,310,311,3,18,9,0,311,312,5,5,0,0,312,316,5,8,0,0,313,315,3,40,
+  	20,0,314,313,1,0,0,0,315,318,1,0,0,0,316,314,1,0,0,0,316,317,1,0,0,0,
+  	317,331,1,0,0,0,318,316,1,0,0,0,319,329,5,41,0,0,320,330,3,2,1,0,321,
+  	325,5,8,0,0,322,324,3,2,1,0,323,322,1,0,0,0,324,327,1,0,0,0,325,323,1,
+  	0,0,0,325,326,1,0,0,0,326,328,1,0,0,0,327,325,1,0,0,0,328,330,5,9,0,0,
+  	329,320,1,0,0,0,329,321,1,0,0,0,330,332,1,0,0,0,331,319,1,0,0,0,331,332,
+  	1,0,0,0,332,333,1,0,0,0,333,334,5,9,0,0,334,39,1,0,0,0,335,336,5,42,0,
+  	0,336,337,3,18,9,0,337,341,5,43,0,0,338,340,3,2,1,0,339,338,1,0,0,0,340,
+  	343,1,0,0,0,341,339,1,0,0,0,341,342,1,0,0,0,342,41,1,0,0,0,343,341,1,
+  	0,0,0,344,345,5,44,0,0,345,43,1,0,0,0,346,347,5,45,0,0,347,45,1,0,0,0,
+  	348,349,5,46,0,0,349,350,5,59,0,0,350,351,5,47,0,0,351,361,3,18,9,0,352,
+  	353,5,48,0,0,353,354,5,59,0,0,354,355,5,49,0,0,355,361,3,18,9,0,356,357,
+  	5,50,0,0,357,361,5,59,0,0,358,359,5,51,0,0,359,361,5,59,0,0,360,348,1,
+  	0,0,0,360,352,1,0,0,0,360,356,1,0,0,0,360,358,1,0,0,0,361,47,1,0,0,0,
+  	362,363,5,52,0,0,363,364,5,4,0,0,364,365,3,18,9,0,365,366,5,32,0,0,366,
+  	367,3,18,9,0,367,368,5,5,0,0,368,403,1,0,0,0,369,370,5,53,0,0,370,371,
+  	5,4,0,0,371,372,3,18,9,0,372,373,5,32,0,0,373,374,3,18,9,0,374,375,5,
+  	5,0,0,375,403,1,0,0,0,376,377,5,54,0,0,377,378,5,4,0,0,378,379,3,18,9,
+  	0,379,380,5,32,0,0,380,381,3,18,9,0,381,382,5,5,0,0,382,403,1,0,0,0,383,
+  	384,5,55,0,0,384,385,5,4,0,0,385,386,3,18,9,0,386,387,5,32,0,0,387,388,
+  	3,18,9,0,388,389,5,5,0,0,389,403,1,0,0,0,390,391,5,56,0,0,391,392,5,4,
+  	0,0,392,393,3,18,9,0,393,394,5,32,0,0,394,395,3,18,9,0,395,396,5,5,0,
+  	0,396,403,1,0,0,0,397,398,5,57,0,0,398,399,5,4,0,0,399,400,3,18,9,0,400,
+  	401,5,5,0,0,401,403,1,0,0,0,402,362,1,0,0,0,402,369,1,0,0,0,402,376,1,
+  	0,0,0,402,383,1,0,0,0,402,390,1,0,0,0,402,397,1,0,0,0,403,49,1,0,0,0,
+  	404,405,5,58,0,0,405,406,5,61,0,0,406,51,1,0,0,0,31,55,79,88,107,116,
+  	120,130,143,160,175,186,188,206,214,216,225,239,242,250,255,257,268,296,
+  	299,316,325,329,331,341,360,402
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -635,15 +637,36 @@ ProgramacionNinosParser::AsignacionContext* ProgramacionNinosParser::asignacion(
     exitRule();
   });
   try {
-    enterOuterAlt(_localctx, 1);
-    setState(81);
-    match(ProgramacionNinosParser::T__0);
-    setState(82);
-    match(ProgramacionNinosParser::ID);
-    setState(83);
-    match(ProgramacionNinosParser::T__1);
-    setState(84);
-    expresion(0);
+    setState(88);
+    _errHandler->sync(this);
+    switch (_input->LA(1)) {
+      case ProgramacionNinosParser::T__0: {
+        enterOuterAlt(_localctx, 1);
+        setState(81);
+        match(ProgramacionNinosParser::T__0);
+        setState(82);
+        match(ProgramacionNinosParser::ID);
+        setState(83);
+        match(ProgramacionNinosParser::T__1);
+        setState(84);
+        expresion(0);
+        break;
+      }
+
+      case ProgramacionNinosParser::ID: {
+        enterOuterAlt(_localctx, 2);
+        setState(85);
+        match(ProgramacionNinosParser::ID);
+        setState(86);
+        match(ProgramacionNinosParser::T__1);
+        setState(87);
+        expresion(0);
+        break;
+      }
+
+    default:
+      throw NoViableAltException(this);
+    }
    
   }
   catch (RecognitionException &e) {
@@ -691,13 +714,13 @@ ProgramacionNinosParser::ImprimirContext* ProgramacionNinosParser::imprimir() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(86);
+    setState(90);
     match(ProgramacionNinosParser::T__2);
-    setState(87);
+    setState(91);
     match(ProgramacionNinosParser::T__3);
-    setState(88);
+    setState(92);
     expresion(0);
-    setState(89);
+    setState(93);
     match(ProgramacionNinosParser::T__4);
    
   }
@@ -742,11 +765,11 @@ ProgramacionNinosParser::EntradaContext* ProgramacionNinosParser::entrada() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(91);
+    setState(95);
     match(ProgramacionNinosParser::T__5);
-    setState(92);
+    setState(96);
     match(ProgramacionNinosParser::T__3);
-    setState(93);
+    setState(97);
     match(ProgramacionNinosParser::T__4);
    
   }
@@ -804,50 +827,50 @@ ProgramacionNinosParser::CondicionalContext* ProgramacionNinosParser::condiciona
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(95);
-    match(ProgramacionNinosParser::T__6);
-    setState(96);
-    match(ProgramacionNinosParser::T__3);
-    setState(97);
-    condicion(0);
-    setState(98);
-    match(ProgramacionNinosParser::T__4);
     setState(99);
-    match(ProgramacionNinosParser::T__7);
+    match(ProgramacionNinosParser::T__6);
+    setState(100);
+    match(ProgramacionNinosParser::T__3);
+    setState(101);
+    condicion(0);
+    setState(102);
+    match(ProgramacionNinosParser::T__4);
     setState(103);
+    match(ProgramacionNinosParser::T__7);
+    setState(107);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1152201507026778314) != 0)) {
-      setState(100);
+      setState(104);
       instruccion();
-      setState(105);
+      setState(109);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(106);
+    setState(110);
     match(ProgramacionNinosParser::T__8);
-    setState(116);
+    setState(120);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == ProgramacionNinosParser::T__9) {
-      setState(107);
+      setState(111);
       match(ProgramacionNinosParser::T__9);
-      setState(108);
-      match(ProgramacionNinosParser::T__7);
       setState(112);
+      match(ProgramacionNinosParser::T__7);
+      setState(116);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while ((((_la & ~ 0x3fULL) == 0) &&
         ((1ULL << _la) & 1152201507026778314) != 0)) {
-        setState(109);
+        setState(113);
         instruccion();
-        setState(114);
+        setState(118);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
-      setState(115);
+      setState(119);
       match(ProgramacionNinosParser::T__8);
     }
    
@@ -906,28 +929,28 @@ ProgramacionNinosParser::BucleContext* ProgramacionNinosParser::bucle() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(118);
-    match(ProgramacionNinosParser::T__10);
-    setState(119);
-    match(ProgramacionNinosParser::T__3);
-    setState(120);
-    expresion(0);
-    setState(121);
-    match(ProgramacionNinosParser::T__4);
     setState(122);
-    match(ProgramacionNinosParser::T__7);
+    match(ProgramacionNinosParser::T__10);
+    setState(123);
+    match(ProgramacionNinosParser::T__3);
+    setState(124);
+    expresion(0);
+    setState(125);
+    match(ProgramacionNinosParser::T__4);
     setState(126);
+    match(ProgramacionNinosParser::T__7);
+    setState(130);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1152201507026778314) != 0)) {
-      setState(123);
+      setState(127);
       instruccion();
-      setState(128);
+      setState(132);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(129);
+    setState(133);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -985,28 +1008,28 @@ ProgramacionNinosParser::BucleMientrasContext* ProgramacionNinosParser::bucleMie
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(131);
-    match(ProgramacionNinosParser::T__11);
-    setState(132);
-    match(ProgramacionNinosParser::T__3);
-    setState(133);
-    condicion(0);
-    setState(134);
-    match(ProgramacionNinosParser::T__4);
     setState(135);
-    match(ProgramacionNinosParser::T__7);
+    match(ProgramacionNinosParser::T__11);
+    setState(136);
+    match(ProgramacionNinosParser::T__3);
+    setState(137);
+    condicion(0);
+    setState(138);
+    match(ProgramacionNinosParser::T__4);
     setState(139);
+    match(ProgramacionNinosParser::T__7);
+    setState(143);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1152201507026778314) != 0)) {
-      setState(136);
+      setState(140);
       instruccion();
-      setState(141);
+      setState(145);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(142);
+    setState(146);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -1080,36 +1103,36 @@ ProgramacionNinosParser::BucleparaContext* ProgramacionNinosParser::buclepara() 
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(144);
-    match(ProgramacionNinosParser::T__12);
-    setState(145);
-    match(ProgramacionNinosParser::T__3);
-    setState(146);
-    asignacion();
-    setState(147);
-    match(ProgramacionNinosParser::PUNTOYCOMA);
     setState(148);
-    condicion(0);
+    match(ProgramacionNinosParser::T__12);
     setState(149);
-    match(ProgramacionNinosParser::PUNTOYCOMA);
+    match(ProgramacionNinosParser::T__3);
     setState(150);
     asignacion();
     setState(151);
-    match(ProgramacionNinosParser::T__4);
+    match(ProgramacionNinosParser::PUNTOYCOMA);
     setState(152);
-    match(ProgramacionNinosParser::T__7);
+    condicion(0);
+    setState(153);
+    match(ProgramacionNinosParser::PUNTOYCOMA);
+    setState(154);
+    asignacion();
+    setState(155);
+    match(ProgramacionNinosParser::T__4);
     setState(156);
+    match(ProgramacionNinosParser::T__7);
+    setState(160);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1152201507026778314) != 0)) {
-      setState(153);
+      setState(157);
       instruccion();
-      setState(158);
+      setState(162);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(159);
+    setState(163);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -1195,55 +1218,55 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(171);
+    setState(175);
     _errHandler->sync(this);
-    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 8, _ctx)) {
+    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 9, _ctx)) {
     case 1: {
-      setState(162);
+      setState(166);
       match(ProgramacionNinosParser::INT);
       break;
     }
 
     case 2: {
-      setState(163);
+      setState(167);
       match(ProgramacionNinosParser::STRING);
       break;
     }
 
     case 3: {
-      setState(164);
+      setState(168);
       match(ProgramacionNinosParser::T__13);
       break;
     }
 
     case 4: {
-      setState(165);
+      setState(169);
       match(ProgramacionNinosParser::T__14);
       break;
     }
 
     case 5: {
-      setState(166);
+      setState(170);
       match(ProgramacionNinosParser::ID);
       break;
     }
 
     case 6: {
-      setState(167);
+      setState(171);
       match(ProgramacionNinosParser::T__22);
-      setState(168);
+      setState(172);
       expresion(3);
       break;
     }
 
     case 7: {
-      setState(169);
+      setState(173);
       accesoArreglo();
       break;
     }
 
     case 8: {
-      setState(170);
+      setState(174);
       funcionMatematica();
       break;
     }
@@ -1252,24 +1275,24 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
       break;
     }
     _ctx->stop = _input->LT(-1);
-    setState(184);
+    setState(188);
     _errHandler->sync(this);
-    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 10, _ctx);
+    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 11, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
         if (!_parseListeners.empty())
           triggerExitRuleEvent();
         previousContext = _localctx;
-        setState(182);
+        setState(186);
         _errHandler->sync(this);
-        switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 9, _ctx)) {
+        switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 10, _ctx)) {
         case 1: {
           _localctx = _tracker.createInstance<ExpresionContext>(parentContext, parentState);
           pushNewRecursionContext(_localctx, startState, RuleExpresion);
-          setState(173);
+          setState(177);
 
           if (!(precpred(_ctx, 6))) throw FailedPredicateException(this, "precpred(_ctx, 6)");
-          setState(174);
+          setState(178);
           _la = _input->LA(1);
           if (!((((_la & ~ 0x3fULL) == 0) &&
             ((1ULL << _la) & 2031616) != 0))) {
@@ -1279,7 +1302,7 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
             _errHandler->reportMatch(this);
             consume();
           }
-          setState(175);
+          setState(179);
           expresion(7);
           break;
         }
@@ -1287,12 +1310,12 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
         case 2: {
           _localctx = _tracker.createInstance<ExpresionContext>(parentContext, parentState);
           pushNewRecursionContext(_localctx, startState, RuleExpresion);
-          setState(176);
+          setState(180);
 
           if (!(precpred(_ctx, 5))) throw FailedPredicateException(this, "precpred(_ctx, 5)");
-          setState(177);
+          setState(181);
           match(ProgramacionNinosParser::T__20);
-          setState(178);
+          setState(182);
           expresion(6);
           break;
         }
@@ -1300,12 +1323,12 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
         case 3: {
           _localctx = _tracker.createInstance<ExpresionContext>(parentContext, parentState);
           pushNewRecursionContext(_localctx, startState, RuleExpresion);
-          setState(179);
+          setState(183);
 
           if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
-          setState(180);
+          setState(184);
           match(ProgramacionNinosParser::T__21);
-          setState(181);
+          setState(185);
           expresion(5);
           break;
         }
@@ -1314,9 +1337,9 @@ ProgramacionNinosParser::ExpresionContext* ProgramacionNinosParser::expresion(in
           break;
         } 
       }
-      setState(186);
+      setState(190);
       _errHandler->sync(this);
-      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 10, _ctx);
+      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 11, _ctx);
     }
   }
   catch (RecognitionException &e) {
@@ -1392,13 +1415,13 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(202);
+    setState(206);
     _errHandler->sync(this);
-    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 11, _ctx)) {
+    switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 12, _ctx)) {
     case 1: {
-      setState(188);
+      setState(192);
       expresion(0);
-      setState(189);
+      setState(193);
       _la = _input->LA(1);
       if (!((((_la & ~ 0x3fULL) == 0) &&
         ((1ULL << _la) & 1056964608) != 0))) {
@@ -1408,15 +1431,15 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
         _errHandler->reportMatch(this);
         consume();
       }
-      setState(190);
+      setState(194);
       expresion(0);
       break;
     }
 
     case 2: {
-      setState(192);
+      setState(196);
       expresion(0);
-      setState(193);
+      setState(197);
       _la = _input->LA(1);
       if (!(_la == ProgramacionNinosParser::T__23
 
@@ -1427,25 +1450,25 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
         _errHandler->reportMatch(this);
         consume();
       }
-      setState(194);
+      setState(198);
       match(ProgramacionNinosParser::STRING);
       break;
     }
 
     case 3: {
-      setState(196);
+      setState(200);
       match(ProgramacionNinosParser::T__22);
-      setState(197);
+      setState(201);
       match(ProgramacionNinosParser::T__3);
-      setState(198);
+      setState(202);
       condicion(0);
-      setState(199);
+      setState(203);
       match(ProgramacionNinosParser::T__4);
       break;
     }
 
     case 4: {
-      setState(201);
+      setState(205);
       match(ProgramacionNinosParser::T__29);
       break;
     }
@@ -1454,26 +1477,26 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
       break;
     }
     _ctx->stop = _input->LT(-1);
-    setState(212);
+    setState(216);
     _errHandler->sync(this);
-    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 13, _ctx);
+    alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 14, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
       if (alt == 1) {
         if (!_parseListeners.empty())
           triggerExitRuleEvent();
         previousContext = _localctx;
-        setState(210);
+        setState(214);
         _errHandler->sync(this);
-        switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 12, _ctx)) {
+        switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 13, _ctx)) {
         case 1: {
           _localctx = _tracker.createInstance<CondicionContext>(parentContext, parentState);
           pushNewRecursionContext(_localctx, startState, RuleCondicion);
-          setState(204);
+          setState(208);
 
           if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
-          setState(205);
+          setState(209);
           match(ProgramacionNinosParser::T__20);
-          setState(206);
+          setState(210);
           condicion(5);
           break;
         }
@@ -1481,12 +1504,12 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
         case 2: {
           _localctx = _tracker.createInstance<CondicionContext>(parentContext, parentState);
           pushNewRecursionContext(_localctx, startState, RuleCondicion);
-          setState(207);
+          setState(211);
 
           if (!(precpred(_ctx, 3))) throw FailedPredicateException(this, "precpred(_ctx, 3)");
-          setState(208);
+          setState(212);
           match(ProgramacionNinosParser::T__21);
-          setState(209);
+          setState(213);
           condicion(4);
           break;
         }
@@ -1495,9 +1518,9 @@ ProgramacionNinosParser::CondicionContext* ProgramacionNinosParser::condicion(in
           break;
         } 
       }
-      setState(214);
+      setState(218);
       _errHandler->sync(this);
-      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 13, _ctx);
+      alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 14, _ctx);
     }
   }
   catch (RecognitionException &e) {
@@ -1553,33 +1576,33 @@ ProgramacionNinosParser::FuncionContext* ProgramacionNinosParser::funcion() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(215);
+    setState(219);
     match(ProgramacionNinosParser::T__30);
-    setState(216);
+    setState(220);
     match(ProgramacionNinosParser::ID);
-    setState(217);
-    match(ProgramacionNinosParser::T__3);
     setState(221);
+    match(ProgramacionNinosParser::T__3);
+    setState(225);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == ProgramacionNinosParser::ID) {
-      setState(218);
+      setState(222);
       match(ProgramacionNinosParser::ID);
 
-      setState(219);
+      setState(223);
       match(ProgramacionNinosParser::T__31);
-      setState(220);
+      setState(224);
       match(ProgramacionNinosParser::ID);
     }
-    setState(223);
+    setState(227);
     match(ProgramacionNinosParser::T__4);
-    setState(224);
+    setState(228);
     match(ProgramacionNinosParser::T__7);
 
-    setState(225);
+    setState(229);
     instruccion();
-    setState(226);
+    setState(230);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -1637,32 +1660,32 @@ ProgramacionNinosParser::LlamadaFuncionContext* ProgramacionNinosParser::llamada
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(228);
+    setState(232);
     match(ProgramacionNinosParser::ID);
-    setState(229);
+    setState(233);
     match(ProgramacionNinosParser::T__3);
-    setState(238);
+    setState(242);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 4318952042656743424) != 0)) {
-      setState(230);
+      setState(234);
       expresion(0);
-      setState(235);
+      setState(239);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == ProgramacionNinosParser::T__31) {
-        setState(231);
+        setState(235);
         match(ProgramacionNinosParser::T__31);
-        setState(232);
+        setState(236);
         expresion(0);
-        setState(237);
+        setState(241);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
     }
-    setState(240);
+    setState(244);
     match(ProgramacionNinosParser::T__4);
    
   }
@@ -1732,39 +1755,39 @@ ProgramacionNinosParser::ClaseContext* ProgramacionNinosParser::clase() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(242);
-    match(ProgramacionNinosParser::T__32);
-    setState(243);
-    match(ProgramacionNinosParser::ID);
     setState(246);
+    match(ProgramacionNinosParser::T__32);
+    setState(247);
+    match(ProgramacionNinosParser::ID);
+    setState(250);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == ProgramacionNinosParser::T__33) {
-      setState(244);
+      setState(248);
       match(ProgramacionNinosParser::T__33);
-      setState(245);
+      setState(249);
       match(ProgramacionNinosParser::ID);
     }
-    setState(248);
+    setState(252);
     match(ProgramacionNinosParser::T__7);
-    setState(253);
+    setState(257);
     _errHandler->sync(this);
     _la = _input->LA(1);
-    while (_la == ProgramacionNinosParser::T__0
-
-    || _la == ProgramacionNinosParser::T__30) {
-      setState(251);
+    while ((((_la & ~ 0x3fULL) == 0) &&
+      ((1ULL << _la) & 576460754450907138) != 0)) {
+      setState(255);
       _errHandler->sync(this);
       switch (_input->LA(1)) {
-        case ProgramacionNinosParser::T__0: {
-          setState(249);
+        case ProgramacionNinosParser::T__0:
+        case ProgramacionNinosParser::ID: {
+          setState(253);
           asignacion();
           break;
         }
 
         case ProgramacionNinosParser::T__30: {
-          setState(250);
+          setState(254);
           metodo();
           break;
         }
@@ -1772,11 +1795,11 @@ ProgramacionNinosParser::ClaseContext* ProgramacionNinosParser::clase() {
       default:
         throw NoViableAltException(this);
       }
-      setState(255);
+      setState(259);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(256);
+    setState(260);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -1834,33 +1857,33 @@ ProgramacionNinosParser::MetodoContext* ProgramacionNinosParser::metodo() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(258);
+    setState(262);
     match(ProgramacionNinosParser::T__30);
-    setState(259);
+    setState(263);
     match(ProgramacionNinosParser::ID);
-    setState(260);
-    match(ProgramacionNinosParser::T__3);
     setState(264);
+    match(ProgramacionNinosParser::T__3);
+    setState(268);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == ProgramacionNinosParser::ID) {
-      setState(261);
+      setState(265);
       match(ProgramacionNinosParser::ID);
 
-      setState(262);
+      setState(266);
       match(ProgramacionNinosParser::T__31);
-      setState(263);
+      setState(267);
       match(ProgramacionNinosParser::ID);
     }
-    setState(266);
+    setState(270);
     match(ProgramacionNinosParser::T__4);
-    setState(267);
+    setState(271);
     match(ProgramacionNinosParser::T__7);
 
-    setState(268);
+    setState(272);
     instruccion();
-    setState(269);
+    setState(273);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -1909,13 +1932,13 @@ ProgramacionNinosParser::CreacionObjetoContext* ProgramacionNinosParser::creacio
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(271);
+    setState(275);
     match(ProgramacionNinosParser::T__34);
-    setState(272);
+    setState(276);
     match(ProgramacionNinosParser::ID);
-    setState(273);
+    setState(277);
     match(ProgramacionNinosParser::T__3);
-    setState(274);
+    setState(278);
     match(ProgramacionNinosParser::T__4);
    
   }
@@ -1968,11 +1991,11 @@ ProgramacionNinosParser::AccesoObjetoContext* ProgramacionNinosParser::accesoObj
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(276);
+    setState(280);
     match(ProgramacionNinosParser::ID);
-    setState(277);
+    setState(281);
     match(ProgramacionNinosParser::T__35);
-    setState(278);
+    setState(282);
     match(ProgramacionNinosParser::ID);
    
   }
@@ -2034,42 +2057,42 @@ ProgramacionNinosParser::ArregloDeclaracionContext* ProgramacionNinosParser::arr
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(280);
-    match(ProgramacionNinosParser::T__36);
-    setState(281);
-    match(ProgramacionNinosParser::ID);
-    setState(282);
-    match(ProgramacionNinosParser::T__37);
-    setState(283);
-    match(ProgramacionNinosParser::INT);
     setState(284);
-    match(ProgramacionNinosParser::T__38);
+    match(ProgramacionNinosParser::T__36);
     setState(285);
-    match(ProgramacionNinosParser::T__1);
+    match(ProgramacionNinosParser::ID);
     setState(286);
+    match(ProgramacionNinosParser::T__37);
+    setState(287);
+    match(ProgramacionNinosParser::INT);
+    setState(288);
+    match(ProgramacionNinosParser::T__38);
+    setState(289);
+    match(ProgramacionNinosParser::T__1);
+    setState(290);
     match(ProgramacionNinosParser::T__7);
-    setState(295);
+    setState(299);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 4318952042656743424) != 0)) {
-      setState(287);
+      setState(291);
       expresion(0);
-      setState(292);
+      setState(296);
       _errHandler->sync(this);
       _la = _input->LA(1);
       while (_la == ProgramacionNinosParser::T__31) {
-        setState(288);
+        setState(292);
         match(ProgramacionNinosParser::T__31);
-        setState(289);
+        setState(293);
         expresion(0);
-        setState(294);
+        setState(298);
         _errHandler->sync(this);
         _la = _input->LA(1);
       }
     }
-    setState(297);
+    setState(301);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -2122,13 +2145,13 @@ ProgramacionNinosParser::AccesoArregloContext* ProgramacionNinosParser::accesoAr
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(299);
+    setState(303);
     match(ProgramacionNinosParser::ID);
-    setState(300);
+    setState(304);
     match(ProgramacionNinosParser::T__37);
-    setState(301);
+    setState(305);
     expresion(0);
-    setState(302);
+    setState(306);
     match(ProgramacionNinosParser::T__38);
    
   }
@@ -2194,34 +2217,34 @@ ProgramacionNinosParser::SegunContext* ProgramacionNinosParser::segun() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(304);
-    match(ProgramacionNinosParser::T__39);
-    setState(305);
-    match(ProgramacionNinosParser::T__3);
-    setState(306);
-    expresion(0);
-    setState(307);
-    match(ProgramacionNinosParser::T__4);
     setState(308);
-    match(ProgramacionNinosParser::T__7);
+    match(ProgramacionNinosParser::T__39);
+    setState(309);
+    match(ProgramacionNinosParser::T__3);
+    setState(310);
+    expresion(0);
+    setState(311);
+    match(ProgramacionNinosParser::T__4);
     setState(312);
+    match(ProgramacionNinosParser::T__7);
+    setState(316);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while (_la == ProgramacionNinosParser::T__41) {
-      setState(309);
+      setState(313);
       caso();
-      setState(314);
+      setState(318);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
-    setState(327);
+    setState(331);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == ProgramacionNinosParser::T__40) {
-      setState(315);
+      setState(319);
       match(ProgramacionNinosParser::T__40);
-      setState(325);
+      setState(329);
       _errHandler->sync(this);
       switch (_input->LA(1)) {
         case ProgramacionNinosParser::T__0:
@@ -2250,26 +2273,26 @@ ProgramacionNinosParser::SegunContext* ProgramacionNinosParser::segun() {
         case ProgramacionNinosParser::T__56:
         case ProgramacionNinosParser::T__57:
         case ProgramacionNinosParser::ID: {
-          setState(316);
+          setState(320);
           instruccion();
           break;
         }
 
         case ProgramacionNinosParser::T__7: {
-          setState(317);
-          match(ProgramacionNinosParser::T__7);
           setState(321);
+          match(ProgramacionNinosParser::T__7);
+          setState(325);
           _errHandler->sync(this);
           _la = _input->LA(1);
           while ((((_la & ~ 0x3fULL) == 0) &&
             ((1ULL << _la) & 1152201507026778314) != 0)) {
-            setState(318);
+            setState(322);
             instruccion();
-            setState(323);
+            setState(327);
             _errHandler->sync(this);
             _la = _input->LA(1);
           }
-          setState(324);
+          setState(328);
           match(ProgramacionNinosParser::T__8);
           break;
         }
@@ -2278,7 +2301,7 @@ ProgramacionNinosParser::SegunContext* ProgramacionNinosParser::segun() {
         throw NoViableAltException(this);
       }
     }
-    setState(329);
+    setState(333);
     match(ProgramacionNinosParser::T__8);
    
   }
@@ -2336,20 +2359,20 @@ ProgramacionNinosParser::CasoContext* ProgramacionNinosParser::caso() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(331);
+    setState(335);
     match(ProgramacionNinosParser::T__41);
-    setState(332);
+    setState(336);
     expresion(0);
-    setState(333);
-    match(ProgramacionNinosParser::T__42);
     setState(337);
+    match(ProgramacionNinosParser::T__42);
+    setState(341);
     _errHandler->sync(this);
     _la = _input->LA(1);
     while ((((_la & ~ 0x3fULL) == 0) &&
       ((1ULL << _la) & 1152201507026778314) != 0)) {
-      setState(334);
+      setState(338);
       instruccion();
-      setState(339);
+      setState(343);
       _errHandler->sync(this);
       _la = _input->LA(1);
     }
@@ -2396,7 +2419,7 @@ ProgramacionNinosParser::PausarContext* ProgramacionNinosParser::pausar() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(340);
+    setState(344);
     match(ProgramacionNinosParser::T__43);
    
   }
@@ -2441,7 +2464,7 @@ ProgramacionNinosParser::ContinuarContext* ProgramacionNinosParser::continuar() 
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(342);
+    setState(346);
     match(ProgramacionNinosParser::T__44);
    
   }
@@ -2493,49 +2516,49 @@ ProgramacionNinosParser::EventoContext* ProgramacionNinosParser::evento() {
     exitRule();
   });
   try {
-    setState(356);
+    setState(360);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case ProgramacionNinosParser::T__45: {
         enterOuterAlt(_localctx, 1);
-        setState(344);
+        setState(348);
         match(ProgramacionNinosParser::T__45);
-        setState(345);
+        setState(349);
         match(ProgramacionNinosParser::ID);
-        setState(346);
+        setState(350);
         match(ProgramacionNinosParser::T__46);
-        setState(347);
+        setState(351);
         expresion(0);
         break;
       }
 
       case ProgramacionNinosParser::T__47: {
         enterOuterAlt(_localctx, 2);
-        setState(348);
+        setState(352);
         match(ProgramacionNinosParser::T__47);
-        setState(349);
+        setState(353);
         match(ProgramacionNinosParser::ID);
-        setState(350);
+        setState(354);
         match(ProgramacionNinosParser::T__48);
-        setState(351);
+        setState(355);
         expresion(0);
         break;
       }
 
       case ProgramacionNinosParser::T__49: {
         enterOuterAlt(_localctx, 3);
-        setState(352);
+        setState(356);
         match(ProgramacionNinosParser::T__49);
-        setState(353);
+        setState(357);
         match(ProgramacionNinosParser::ID);
         break;
       }
 
       case ProgramacionNinosParser::T__50: {
         enterOuterAlt(_localctx, 4);
-        setState(354);
+        setState(358);
         match(ProgramacionNinosParser::T__50);
-        setState(355);
+        setState(359);
         match(ProgramacionNinosParser::ID);
         break;
       }
@@ -2593,103 +2616,103 @@ ProgramacionNinosParser::FuncionMatematicaContext* ProgramacionNinosParser::func
     exitRule();
   });
   try {
-    setState(398);
+    setState(402);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case ProgramacionNinosParser::T__51: {
         enterOuterAlt(_localctx, 1);
-        setState(358);
-        match(ProgramacionNinosParser::T__51);
-        setState(359);
-        match(ProgramacionNinosParser::T__3);
-        setState(360);
-        expresion(0);
-        setState(361);
-        match(ProgramacionNinosParser::T__31);
         setState(362);
-        expresion(0);
+        match(ProgramacionNinosParser::T__51);
         setState(363);
+        match(ProgramacionNinosParser::T__3);
+        setState(364);
+        expresion(0);
+        setState(365);
+        match(ProgramacionNinosParser::T__31);
+        setState(366);
+        expresion(0);
+        setState(367);
         match(ProgramacionNinosParser::T__4);
         break;
       }
 
       case ProgramacionNinosParser::T__52: {
         enterOuterAlt(_localctx, 2);
-        setState(365);
-        match(ProgramacionNinosParser::T__52);
-        setState(366);
-        match(ProgramacionNinosParser::T__3);
-        setState(367);
-        expresion(0);
-        setState(368);
-        match(ProgramacionNinosParser::T__31);
         setState(369);
-        expresion(0);
+        match(ProgramacionNinosParser::T__52);
         setState(370);
+        match(ProgramacionNinosParser::T__3);
+        setState(371);
+        expresion(0);
+        setState(372);
+        match(ProgramacionNinosParser::T__31);
+        setState(373);
+        expresion(0);
+        setState(374);
         match(ProgramacionNinosParser::T__4);
         break;
       }
 
       case ProgramacionNinosParser::T__53: {
         enterOuterAlt(_localctx, 3);
-        setState(372);
-        match(ProgramacionNinosParser::T__53);
-        setState(373);
-        match(ProgramacionNinosParser::T__3);
-        setState(374);
-        expresion(0);
-        setState(375);
-        match(ProgramacionNinosParser::T__31);
         setState(376);
-        expresion(0);
+        match(ProgramacionNinosParser::T__53);
         setState(377);
+        match(ProgramacionNinosParser::T__3);
+        setState(378);
+        expresion(0);
+        setState(379);
+        match(ProgramacionNinosParser::T__31);
+        setState(380);
+        expresion(0);
+        setState(381);
         match(ProgramacionNinosParser::T__4);
         break;
       }
 
       case ProgramacionNinosParser::T__54: {
         enterOuterAlt(_localctx, 4);
-        setState(379);
-        match(ProgramacionNinosParser::T__54);
-        setState(380);
-        match(ProgramacionNinosParser::T__3);
-        setState(381);
-        expresion(0);
-        setState(382);
-        match(ProgramacionNinosParser::T__31);
         setState(383);
-        expresion(0);
+        match(ProgramacionNinosParser::T__54);
         setState(384);
+        match(ProgramacionNinosParser::T__3);
+        setState(385);
+        expresion(0);
+        setState(386);
+        match(ProgramacionNinosParser::T__31);
+        setState(387);
+        expresion(0);
+        setState(388);
         match(ProgramacionNinosParser::T__4);
         break;
       }
 
       case ProgramacionNinosParser::T__55: {
         enterOuterAlt(_localctx, 5);
-        setState(386);
-        match(ProgramacionNinosParser::T__55);
-        setState(387);
-        match(ProgramacionNinosParser::T__3);
-        setState(388);
-        expresion(0);
-        setState(389);
-        match(ProgramacionNinosParser::T__31);
         setState(390);
-        expresion(0);
+        match(ProgramacionNinosParser::T__55);
         setState(391);
+        match(ProgramacionNinosParser::T__3);
+        setState(392);
+        expresion(0);
+        setState(393);
+        match(ProgramacionNinosParser::T__31);
+        setState(394);
+        expresion(0);
+        setState(395);
         match(ProgramacionNinosParser::T__4);
         break;
       }
 
       case ProgramacionNinosParser::T__56: {
         enterOuterAlt(_localctx, 6);
-        setState(393);
+        setState(397);
         match(ProgramacionNinosParser::T__56);
-        setState(394);
+        setState(398);
         match(ProgramacionNinosParser::T__3);
-        setState(395);
+        setState(399);
         expresion(0);
-        setState(396);
+        setState(400);
         match(ProgramacionNinosParser::T__4);
         break;
       }
@@ -2744,9 +2767,9 @@ ProgramacionNinosParser::ComentarioContext* ProgramacionNinosParser::comentario(
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(400);
+    setState(404);
     match(ProgramacionNinosParser::T__57);
-    setState(401);
+    setState(405);
     match(ProgramacionNinosParser::STRING);
    
   }

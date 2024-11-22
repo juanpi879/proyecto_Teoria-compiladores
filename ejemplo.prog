@@ -1,7 +1,21 @@
-variable x = 2
-variable r = 3
-variable z = cuadrado(x)
-imprimir(z)
-variable w = elevar(2, 3)
-imprimir(w)
+variable i = 0
+
+mientras (i < 3) {
+    segun (i) {
+        caso 0:
+            imprimir("Caso 0")
+            
+        caso 1:
+            imprimir("Caso 1")
+            
+        caso 2:
+            imprimir("Caso 2")
+            
+        defecto
+            imprimir("Caso desconocido")
+    }
+    i = i + 1
+}
+
+imprimir("Fin del programa.")
 

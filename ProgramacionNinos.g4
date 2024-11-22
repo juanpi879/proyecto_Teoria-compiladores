@@ -27,7 +27,10 @@ instruccion
     ;
 
 // Asignación de variables
-asignacion: 'variable' ID '=' expresion;
+asignacion: 
+    'variable' ID '=' expresion
+    | ID '=' expresion;
+
 
 // Impresión de valores
 imprimir: 'imprimir' '(' expresion ')';
