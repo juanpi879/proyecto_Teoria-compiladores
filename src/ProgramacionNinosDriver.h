@@ -58,39 +58,66 @@ public:
         std::string varName = ctx->ID()->getText();
         std::cout << "Visitando Asignacion para la variable: " << varName << std::endl;
 
-        // Obtener el valor de la expresión
-        Value *val = std::any_cast<Value*>(visit(ctx->expresion()));
-        if (!val) {
-            std::cerr << "Error: No se pudo obtener el valor de la expresión para la asignación de " << varName << std::endl;
+        auto val = visit(ctx->expresion());
+        if (val.type() == typeid(Value*)) {
+            std::cout << "Valor asignado es de tipo Value* (numérico).\n";
+        } else if (val.type() == typeid(GlobalVariable*)) {
+            std::cout << "Valor asignado es de tipo GlobalVariable* (cadena).\n";
+        } else {
+            std::cerr << "Error: Tipo inesperado en la asignación de " << varName << ".\n";
+        }
+
+        if (auto floatVal = std::any_cast<Value*>(&val); floatVal != nullptr) {
+            // Si es un número
+            sym[varName] = *floatVal;
+            std::cout << "Asignación completada (número) para " << varName << std::endl;
+        } else if (auto strVar = std::any_cast<GlobalVariable*>(&val); strVar != nullptr) {
+            // Si es una cadena
+            sym[varName] = *strVar;
+            std::cout << "Asignación completada (cadena) para " << varName << std::endl;
+        } else {
+            std::cerr << "Error: Tipo de expresión no soportado para la asignación de " << varName << std::endl;
             return nullptr;
         }
 
-        // Almacenar el valor en el mapa de símbolos
-        sym[varName] = val;
-
-        std::cout << "Asignación completada para " << varName << std::endl;
-        return val;
+        return nullptr;
     }
+
+
+ 
 
     // Implementación del visitor para expresiones (solo números por ahora)
     std::any visitExpresion(ProgramacionNinosParser::ExpresionContext *ctx) override {
-        if (ctx->INT()) { // Manejar números enteros
+         if (ctx->INT()) {
+            // Manejar números enteros
             int value = std::stoi(ctx->INT()->getText());
             return static_cast<Value*>(ConstantFP::get(context, APFloat(static_cast<float>(value))));
         }
-        
-        if (auto funcMathCtx = ctx->funcionMatematica()) { // Si es una función matemática
-        return visit(funcMathCtx);
-        }
-        
-        if (ctx->STRING()) { // Manejar cadenas de texto
-            std::string strValue = ctx->STRING()->getText(); // Incluye las comillas
-            // Elimina las comillas del string
-            strValue = strValue.substr(1, strValue.length() - 2);
-            return strValue;
+
+        if (auto funcMathCtx = ctx->funcionMatematica()) {
+            // Manejar funciones matemáticas
+            return visit(funcMathCtx);
         }
 
-        if (ctx->ID()) { // Manejar identificadores (variables)
+        if (ctx->STRING()) {
+            // Manejar cadenas de texto
+            std::string strValue = ctx->STRING()->getText();
+            strValue = strValue.substr(1, strValue.length() - 2); // Eliminar comillas
+
+            // Crear o reutilizar una GlobalVariable para esta cadena
+            if (stringCache.find(strValue) == stringCache.end()) {
+                auto *strType = ArrayType::get(Type::getInt8Ty(context), strValue.size() + 1);
+                GlobalVariable *strVar = new GlobalVariable(
+                    *module, strType, true, GlobalValue::PrivateLinkage,
+                    ConstantDataArray::getString(context, strValue), "str"
+                );
+                stringCache[strValue] = strVar;
+            }
+            return stringCache[strValue];
+        }
+
+        if (ctx->ID()) {
+            // Manejar identificadores
             std::string varName = ctx->ID()->getText();
             if (sym.count(varName)) {
                 return sym[varName];
@@ -127,32 +154,21 @@ public:
             return nullptr;
         }
 
+        // Verificar si el valor es un número
         if (auto floatVal = std::any_cast<Value*>(&val); floatVal != nullptr) {
-            // Imprimir números
+            std::cout << "Imprimiendo número.\n";
             Function *printFunc = cast<Function>(module->getOrInsertFunction(
                 "print", FunctionType::get(Type::getVoidTy(context), {Type::getFloatTy(context)}, false)
             ).getCallee());
             builder.CreateCall(printFunc, {*floatVal});
-        } else if (auto stringVal = std::any_cast<std::string>(&val); stringVal != nullptr) {
-            // Imprimir cadenas con caché
-            GlobalVariable *strVar = nullptr;
-            if (stringCache.find(*stringVal) == stringCache.end()) {
-                // Crear una nueva cadena en caché si no existe
-                auto *strType = ArrayType::get(Type::getInt8Ty(context), stringVal->size() + 1);
-                strVar = new GlobalVariable(
-                    *module, strType, true, GlobalValue::PrivateLinkage, 
-                    ConstantDataArray::getString(context, *stringVal), "str"
-                );
-                stringCache[*stringVal] = strVar;
-            } else {
-                // Reutilizar la cadena del caché
-                strVar = stringCache[*stringVal];
-            }
-
+        } 
+        // Verificar si el valor es una cadena (GlobalVariable)
+        else if (auto strVar = std::any_cast<GlobalVariable*>(&val); strVar != nullptr) {
+            std::cout << "Imprimiendo cadena.\n";
             Function *printStringFunc = cast<Function>(module->getOrInsertFunction(
                 "printString", FunctionType::get(Type::getVoidTy(context), {PointerType::get(Type::getInt8Ty(context), 0)}, false)
             ).getCallee());
-            Value *strPtr = builder.CreateBitCast(strVar, PointerType::get(Type::getInt8Ty(context), 0));
+            Value *strPtr = builder.CreateBitCast(*strVar, PointerType::get(Type::getInt8Ty(context), 0));
             builder.CreateCall(printStringFunc, {strPtr});
         } else {
             std::cerr << "Error: Tipo de expresión no soportado en imprimir.\n";
@@ -162,19 +178,42 @@ public:
         return nullptr;
     }
 
+
+
     std::any visitFuncionMatematica(ProgramacionNinosParser::FuncionMatematicaContext *ctx) override {
         std::cout << "Visitando FuncionMatematica" << std::endl;
 
-        // Evaluar las dos expresiones dentro de la función matemática
+        if (ctx->getText().find("elevar") != std::string::npos) {
+            Value *base = std::any_cast<Value*>(visit(ctx->expresion(0)));
+            Value *exponent = std::any_cast<Value*>(visit(ctx->expresion(1)));
+            if (!base || !exponent) {
+                std::cerr << "Error: Operandos inválidos en 'elevar'.\n";
+                return nullptr;
+            }
+
+            FunctionCallee powFunc = module->getOrInsertFunction(
+                "llvm.pow.f32", 
+                FunctionType::get(Type::getFloatTy(context), {Type::getFloatTy(context), Type::getFloatTy(context)}, false)
+            );
+            Value *result = builder.CreateCall(powFunc, {base, exponent}, "elevartmp");
+            return builder.CreateFPCast(result, Type::getFloatTy(context), "castedtmp");
+        } else if (ctx->getText().find("cuadrado") != std::string::npos) {
+            Value *operand = std::any_cast<Value*>(visit(ctx->expresion(0)));
+            if (!operand) {
+                std::cerr << "Error: Operando inválido para 'cuadrado'.\n";
+                return nullptr;
+            }
+            return builder.CreateFMul(operand, operand, "cuadradotmp");
+        }
+
         Value *lhs = std::any_cast<Value*>(visit(ctx->expresion(0)));
         Value *rhs = std::any_cast<Value*>(visit(ctx->expresion(1)));
 
         if (!lhs || !rhs) {
-            std::cerr << "Error: Una de las expresiones en la función matemática no es válida.\n";
+            std::cerr << "Error: Operandos inválidos en función matemática.\n";
             return nullptr;
         }
 
-        // Determinar qué operación ejecutar
         if (ctx->getText().find("sumar") != std::string::npos) {
             return builder.CreateFAdd(lhs, rhs, "sumartmp");
         } else if (ctx->getText().find("restar") != std::string::npos) {
@@ -188,6 +227,7 @@ public:
             return nullptr;
         }
     }
+
 
     std::any visitCondicional(ProgramacionNinosParser::CondicionalContext *ctx) override {
         std::cout << "Visitando Condicional" << std::endl;

@@ -21,8 +21,8 @@ public:
     T__38 = 39, T__39 = 40, T__40 = 41, T__41 = 42, T__42 = 43, T__43 = 44, 
     T__44 = 45, T__45 = 46, T__46 = 47, T__47 = 48, T__48 = 49, T__49 = 50, 
     T__50 = 51, T__51 = 52, T__52 = 53, T__53 = 54, T__54 = 55, T__55 = 56, 
-    ID = 57, INT = 58, STRING = 59, WS = 60, PUNTOYCOMA = 61, COMENTARIO = 62, 
-    COMENTARIO_MULTILINEA = 63
+    T__56 = 57, T__57 = 58, ID = 59, INT = 60, STRING = 61, WS = 62, PUNTOYCOMA = 63, 
+    COMENTARIO = 64, COMENTARIO_MULTILINEA = 65
   };
 
   explicit ProgramacionNinosLexer(antlr4::CharStream *input);

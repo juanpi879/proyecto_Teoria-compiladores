@@ -1,8 +1,7 @@
-variable x = 4
-variable z = 9
-si (no (x > 3)) {
-    imprimir("No mayor")
-} sino {
-    imprimir("Mayor")
-}
+variable x = 2
+variable r = 3
+variable z = cuadrado(x)
+imprimir(z)
+variable w = elevar(2, 3)
+imprimir(w)
 

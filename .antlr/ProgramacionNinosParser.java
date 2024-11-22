@@ -23,8 +23,8 @@ public class ProgramacionNinosParser extends Parser {
 		T__31=32, T__32=33, T__33=34, T__34=35, T__35=36, T__36=37, T__37=38, 
 		T__38=39, T__39=40, T__40=41, T__41=42, T__42=43, T__43=44, T__44=45, 
 		T__45=46, T__46=47, T__47=48, T__48=49, T__49=50, T__50=51, T__51=52, 
-		T__52=53, T__53=54, T__54=55, T__55=56, ID=57, INT=58, STRING=59, WS=60, 
-		PUNTOYCOMA=61, COMENTARIO=62, COMENTARIO_MULTILINEA=63;
+		T__52=53, T__53=54, T__54=55, T__55=56, T__56=57, T__57=58, ID=59, INT=60, 
+		STRING=61, WS=62, PUNTOYCOMA=63, COMENTARIO=64, COMENTARIO_MULTILINEA=65;
 	public static final int
 		RULE_programa = 0, RULE_instruccion = 1, RULE_asignacion = 2, RULE_imprimir = 3, 
 		RULE_entrada = 4, RULE_condicional = 5, RULE_bucle = 6, RULE_bucleMientras = 7, 
@@ -53,8 +53,8 @@ public class ProgramacionNinosParser extends Parser {
 			"'definir'", "','", "'clase'", "'hereda'", "'nuevo'", "'.'", "'arreglo'", 
 			"'['", "']'", "'segun'", "'defecto'", "'caso'", "':'", "'pausar'", "'continuar'", 
 			"'mover'", "'hacia'", "'girar'", "'a'", "'encender'", "'apagar'", "'sumar'", 
-			"'restar'", "'multiplicar'", "'dividir'", "'comentar'", null, null, null, 
-			null, "';'"
+			"'restar'", "'multiplicar'", "'dividir'", "'elevar'", "'cuadrado'", "'comentar'", 
+			null, null, null, null, "';'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
@@ -64,8 +64,8 @@ public class ProgramacionNinosParser extends Parser {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, null, null, null, null, "ID", "INT", "STRING", 
-			"WS", "PUNTOYCOMA", "COMENTARIO", "COMENTARIO_MULTILINEA"
+			null, null, null, null, null, null, null, null, null, null, null, "ID", 
+			"INT", "STRING", "WS", "PUNTOYCOMA", "COMENTARIO", "COMENTARIO_MULTILINEA"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -154,7 +154,7 @@ public class ProgramacionNinosParser extends Parser {
 				setState(55); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0) );
 			setState(57);
 			match(EOF);
 			}
@@ -545,7 +545,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(103);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 				{
 				{
 				setState(100);
@@ -570,7 +570,7 @@ public class ProgramacionNinosParser extends Parser {
 				setState(112);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 					{
 					{
 					setState(109);
@@ -636,7 +636,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(126);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 				{
 				{
 				setState(123);
@@ -699,7 +699,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(139);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 				{
 				{
 				setState(136);
@@ -780,7 +780,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(156);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 				{
 				{
 				setState(153);
@@ -1222,7 +1222,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(238);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1076360310949986304L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4318952042656743424L) != 0)) {
 				{
 				setState(230);
 				expresion(0);
@@ -1532,7 +1532,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(295);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1076360310949986304L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 4318952042656743424L) != 0)) {
 				{
 				setState(287);
 				expresion(0);
@@ -1696,6 +1696,8 @@ public class ProgramacionNinosParser extends Parser {
 				case T__53:
 				case T__54:
 				case T__55:
+				case T__56:
+				case T__57:
 				case ID:
 					{
 					setState(316);
@@ -1709,7 +1711,7 @@ public class ProgramacionNinosParser extends Parser {
 					setState(321);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
-					while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+					while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 						{
 						{
 						setState(318);
@@ -1778,7 +1780,7 @@ public class ProgramacionNinosParser extends Parser {
 			setState(337);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 287510378571643082L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1152201507026778314L) != 0)) {
 				{
 				{
 				setState(334);
@@ -1956,7 +1958,7 @@ public class ProgramacionNinosParser extends Parser {
 		FuncionMatematicaContext _localctx = new FuncionMatematicaContext(_ctx, getState());
 		enterRule(_localctx, 48, RULE_funcionMatematica);
 		try {
-			setState(386);
+			setState(398);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
 			case T__51:
@@ -2027,6 +2029,36 @@ public class ProgramacionNinosParser extends Parser {
 				match(T__4);
 				}
 				break;
+			case T__55:
+				enterOuterAlt(_localctx, 5);
+				{
+				setState(386);
+				match(T__55);
+				setState(387);
+				match(T__3);
+				setState(388);
+				expresion(0);
+				setState(389);
+				match(T__31);
+				setState(390);
+				expresion(0);
+				setState(391);
+				match(T__4);
+				}
+				break;
+			case T__56:
+				enterOuterAlt(_localctx, 6);
+				{
+				setState(393);
+				match(T__56);
+				setState(394);
+				match(T__3);
+				setState(395);
+				expresion(0);
+				setState(396);
+				match(T__4);
+				}
+				break;
 			default:
 				throw new NoViableAltException(this);
 			}
@@ -2057,9 +2089,9 @@ public class ProgramacionNinosParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(388);
-			match(T__55);
-			setState(389);
+			setState(400);
+			match(T__57);
+			setState(401);
 			match(STRING);
 			}
 		}
@@ -2105,7 +2137,7 @@ public class ProgramacionNinosParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\u0004\u0001?\u0188\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
+		"\u0004\u0001A\u0194\u0002\u0000\u0007\u0000\u0002\u0001\u0007\u0001\u0002"+
 		"\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004\u0007\u0004\u0002"+
 		"\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007\u0007\u0007\u0002"+
 		"\b\u0007\b\u0002\t\u0007\t\u0002\n\u0007\n\u0002\u000b\u0007\u000b\u0002"+
@@ -2162,11 +2194,13 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001"+
 		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001"+
 		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001"+
-		"\u0018\u0001\u0018\u0001\u0018\u0003\u0018\u0183\b\u0018\u0001\u0019\u0001"+
+		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001"+
+		"\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001\u0018\u0001"+
+		"\u0018\u0001\u0018\u0001\u0018\u0003\u0018\u018f\b\u0018\u0001\u0019\u0001"+
 		"\u0019\u0001\u0019\u0001\u0019\u0000\u0002\u0012\u0014\u001a\u0000\u0002"+
 		"\u0004\u0006\b\n\f\u000e\u0010\u0012\u0014\u0016\u0018\u001a\u001c\u001e"+
 		" \"$&(*,.02\u0000\u0003\u0001\u0000\u0010\u0014\u0001\u0000\u0018\u001d"+
-		"\u0001\u0000\u0018\u0019\u01aa\u00005\u0001\u0000\u0000\u0000\u0002O\u0001"+
+		"\u0001\u0000\u0018\u0019\u01b8\u00005\u0001\u0000\u0000\u0000\u0002O\u0001"+
 		"\u0000\u0000\u0000\u0004Q\u0001\u0000\u0000\u0000\u0006V\u0001\u0000\u0000"+
 		"\u0000\b[\u0001\u0000\u0000\u0000\n_\u0001\u0000\u0000\u0000\fv\u0001"+
 		"\u0000\u0000\u0000\u000e\u0083\u0001\u0000\u0000\u0000\u0010\u0090\u0001"+
@@ -2177,7 +2211,7 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000\u0000\"\u0118\u0001\u0000\u0000\u0000$\u012b\u0001\u0000\u0000"+
 		"\u0000&\u0130\u0001\u0000\u0000\u0000(\u014b\u0001\u0000\u0000\u0000*"+
 		"\u0154\u0001\u0000\u0000\u0000,\u0156\u0001\u0000\u0000\u0000.\u0164\u0001"+
-		"\u0000\u0000\u00000\u0182\u0001\u0000\u0000\u00002\u0184\u0001\u0000\u0000"+
+		"\u0000\u0000\u00000\u018e\u0001\u0000\u0000\u00002\u0190\u0001\u0000\u0000"+
 		"\u000046\u0003\u0002\u0001\u000054\u0001\u0000\u0000\u000067\u0001\u0000"+
 		"\u0000\u000075\u0001\u0000\u0000\u000078\u0001\u0000\u0000\u000089\u0001"+
 		"\u0000\u0000\u00009:\u0005\u0000\u0000\u0001:\u0001\u0001\u0000\u0000"+
@@ -2195,7 +2229,7 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000OH\u0001\u0000\u0000\u0000OI\u0001\u0000\u0000\u0000OJ\u0001\u0000"+
 		"\u0000\u0000OK\u0001\u0000\u0000\u0000OL\u0001\u0000\u0000\u0000OM\u0001"+
 		"\u0000\u0000\u0000ON\u0001\u0000\u0000\u0000P\u0003\u0001\u0000\u0000"+
-		"\u0000QR\u0005\u0001\u0000\u0000RS\u00059\u0000\u0000ST\u0005\u0002\u0000"+
+		"\u0000QR\u0005\u0001\u0000\u0000RS\u0005;\u0000\u0000ST\u0005\u0002\u0000"+
 		"\u0000TU\u0003\u0012\t\u0000U\u0005\u0001\u0000\u0000\u0000VW\u0005\u0003"+
 		"\u0000\u0000WX\u0005\u0004\u0000\u0000XY\u0003\u0012\t\u0000YZ\u0005\u0005"+
 		"\u0000\u0000Z\u0007\u0001\u0000\u0000\u0000[\\\u0005\u0006\u0000\u0000"+
@@ -2223,16 +2257,16 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000\u0000\u008d\u008b\u0001\u0000\u0000\u0000\u008e\u008f\u0005\t\u0000"+
 		"\u0000\u008f\u000f\u0001\u0000\u0000\u0000\u0090\u0091\u0005\r\u0000\u0000"+
 		"\u0091\u0092\u0005\u0004\u0000\u0000\u0092\u0093\u0003\u0004\u0002\u0000"+
-		"\u0093\u0094\u0005=\u0000\u0000\u0094\u0095\u0003\u0014\n\u0000\u0095"+
-		"\u0096\u0005=\u0000\u0000\u0096\u0097\u0003\u0004\u0002\u0000\u0097\u0098"+
+		"\u0093\u0094\u0005?\u0000\u0000\u0094\u0095\u0003\u0014\n\u0000\u0095"+
+		"\u0096\u0005?\u0000\u0000\u0096\u0097\u0003\u0004\u0002\u0000\u0097\u0098"+
 		"\u0005\u0005\u0000\u0000\u0098\u009c\u0005\b\u0000\u0000\u0099\u009b\u0003"+
 		"\u0002\u0001\u0000\u009a\u0099\u0001\u0000\u0000\u0000\u009b\u009e\u0001"+
 		"\u0000\u0000\u0000\u009c\u009a\u0001\u0000\u0000\u0000\u009c\u009d\u0001"+
 		"\u0000\u0000\u0000\u009d\u009f\u0001\u0000\u0000\u0000\u009e\u009c\u0001"+
 		"\u0000\u0000\u0000\u009f\u00a0\u0005\t\u0000\u0000\u00a0\u0011\u0001\u0000"+
-		"\u0000\u0000\u00a1\u00a2\u0006\t\uffff\uffff\u0000\u00a2\u00ac\u0005:"+
-		"\u0000\u0000\u00a3\u00ac\u0005;\u0000\u0000\u00a4\u00ac\u0005\u000e\u0000"+
-		"\u0000\u00a5\u00ac\u0005\u000f\u0000\u0000\u00a6\u00ac\u00059\u0000\u0000"+
+		"\u0000\u0000\u00a1\u00a2\u0006\t\uffff\uffff\u0000\u00a2\u00ac\u0005<"+
+		"\u0000\u0000\u00a3\u00ac\u0005=\u0000\u0000\u00a4\u00ac\u0005\u000e\u0000"+
+		"\u0000\u00a5\u00ac\u0005\u000f\u0000\u0000\u00a6\u00ac\u0005;\u0000\u0000"+
 		"\u00a7\u00a8\u0005\u0017\u0000\u0000\u00a8\u00ac\u0003\u0012\t\u0003\u00a9"+
 		"\u00ac\u0003$\u0012\u0000\u00aa\u00ac\u00030\u0018\u0000\u00ab\u00a1\u0001"+
 		"\u0000\u0000\u0000\u00ab\u00a3\u0001\u0000\u0000\u0000\u00ab\u00a4\u0001"+
@@ -2250,7 +2284,7 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0001\u0000\u0000\u0000\u00bb\u00bc\u0006\n\uffff\uffff\u0000\u00bc\u00bd"+
 		"\u0003\u0012\t\u0000\u00bd\u00be\u0007\u0001\u0000\u0000\u00be\u00bf\u0003"+
 		"\u0012\t\u0000\u00bf\u00cb\u0001\u0000\u0000\u0000\u00c0\u00c1\u0003\u0012"+
-		"\t\u0000\u00c1\u00c2\u0007\u0002\u0000\u0000\u00c2\u00c3\u0005;\u0000"+
+		"\t\u0000\u00c1\u00c2\u0007\u0002\u0000\u0000\u00c2\u00c3\u0005=\u0000"+
 		"\u0000\u00c3\u00cb\u0001\u0000\u0000\u0000\u00c4\u00c5\u0005\u0017\u0000"+
 		"\u0000\u00c5\u00c6\u0005\u0004\u0000\u0000\u00c6\u00c7\u0003\u0014\n\u0000"+
 		"\u00c7\u00c8\u0005\u0005\u0000\u0000\u00c8\u00cb\u0001\u0000\u0000\u0000"+
@@ -2264,13 +2298,13 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000\u0000\u0000\u00d4\u00d2\u0001\u0000\u0000\u0000\u00d4\u00d5\u0001"+
 		"\u0000\u0000\u0000\u00d5\u0015\u0001\u0000\u0000\u0000\u00d6\u00d4\u0001"+
 		"\u0000\u0000\u0000\u00d7\u00d8\u0005\u001f\u0000\u0000\u00d8\u00d9\u0005"+
-		"9\u0000\u0000\u00d9\u00dd\u0005\u0004\u0000\u0000\u00da\u00db\u00059\u0000"+
-		"\u0000\u00db\u00dc\u0005 \u0000\u0000\u00dc\u00de\u00059\u0000\u0000\u00dd"+
+		";\u0000\u0000\u00d9\u00dd\u0005\u0004\u0000\u0000\u00da\u00db\u0005;\u0000"+
+		"\u0000\u00db\u00dc\u0005 \u0000\u0000\u00dc\u00de\u0005;\u0000\u0000\u00dd"+
 		"\u00da\u0001\u0000\u0000\u0000\u00dd\u00de\u0001\u0000\u0000\u0000\u00de"+
 		"\u00df\u0001\u0000\u0000\u0000\u00df\u00e0\u0005\u0005\u0000\u0000\u00e0"+
 		"\u00e1\u0005\b\u0000\u0000\u00e1\u00e2\u0003\u0002\u0001\u0000\u00e2\u00e3"+
 		"\u0005\t\u0000\u0000\u00e3\u0017\u0001\u0000\u0000\u0000\u00e4\u00e5\u0005"+
-		"9\u0000\u0000\u00e5\u00ee\u0005\u0004\u0000\u0000\u00e6\u00eb\u0003\u0012"+
+		";\u0000\u0000\u00e5\u00ee\u0005\u0004\u0000\u0000\u00e6\u00eb\u0003\u0012"+
 		"\t\u0000\u00e7\u00e8\u0005 \u0000\u0000\u00e8\u00ea\u0003\u0012\t\u0000"+
 		"\u00e9\u00e7\u0001\u0000\u0000\u0000\u00ea\u00ed\u0001\u0000\u0000\u0000"+
 		"\u00eb\u00e9\u0001\u0000\u0000\u0000\u00eb\u00ec\u0001\u0000\u0000\u0000"+
@@ -2278,8 +2312,8 @@ public class ProgramacionNinosParser extends Parser {
 		"\u00ee\u00e6\u0001\u0000\u0000\u0000\u00ee\u00ef\u0001\u0000\u0000\u0000"+
 		"\u00ef\u00f0\u0001\u0000\u0000\u0000\u00f0\u00f1\u0005\u0005\u0000\u0000"+
 		"\u00f1\u0019\u0001\u0000\u0000\u0000\u00f2\u00f3\u0005!\u0000\u0000\u00f3"+
-		"\u00f6\u00059\u0000\u0000\u00f4\u00f5\u0005\"\u0000\u0000\u00f5\u00f7"+
-		"\u00059\u0000\u0000\u00f6\u00f4\u0001\u0000\u0000\u0000\u00f6\u00f7\u0001"+
+		"\u00f6\u0005;\u0000\u0000\u00f4\u00f5\u0005\"\u0000\u0000\u00f5\u00f7"+
+		"\u0005;\u0000\u0000\u00f6\u00f4\u0001\u0000\u0000\u0000\u00f6\u00f7\u0001"+
 		"\u0000\u0000\u0000\u00f7\u00f8\u0001\u0000\u0000\u0000\u00f8\u00fd\u0005"+
 		"\b\u0000\u0000\u00f9\u00fc\u0003\u0004\u0002\u0000\u00fa\u00fc\u0003\u001c"+
 		"\u000e\u0000\u00fb\u00f9\u0001\u0000\u0000\u0000\u00fb\u00fa\u0001\u0000"+
@@ -2287,18 +2321,18 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000\u0000\u00fd\u00fe\u0001\u0000\u0000\u0000\u00fe\u0100\u0001\u0000"+
 		"\u0000\u0000\u00ff\u00fd\u0001\u0000\u0000\u0000\u0100\u0101\u0005\t\u0000"+
 		"\u0000\u0101\u001b\u0001\u0000\u0000\u0000\u0102\u0103\u0005\u001f\u0000"+
-		"\u0000\u0103\u0104\u00059\u0000\u0000\u0104\u0108\u0005\u0004\u0000\u0000"+
-		"\u0105\u0106\u00059\u0000\u0000\u0106\u0107\u0005 \u0000\u0000\u0107\u0109"+
-		"\u00059\u0000\u0000\u0108\u0105\u0001\u0000\u0000\u0000\u0108\u0109\u0001"+
+		"\u0000\u0103\u0104\u0005;\u0000\u0000\u0104\u0108\u0005\u0004\u0000\u0000"+
+		"\u0105\u0106\u0005;\u0000\u0000\u0106\u0107\u0005 \u0000\u0000\u0107\u0109"+
+		"\u0005;\u0000\u0000\u0108\u0105\u0001\u0000\u0000\u0000\u0108\u0109\u0001"+
 		"\u0000\u0000\u0000\u0109\u010a\u0001\u0000\u0000\u0000\u010a\u010b\u0005"+
 		"\u0005\u0000\u0000\u010b\u010c\u0005\b\u0000\u0000\u010c\u010d\u0003\u0002"+
 		"\u0001\u0000\u010d\u010e\u0005\t\u0000\u0000\u010e\u001d\u0001\u0000\u0000"+
-		"\u0000\u010f\u0110\u0005#\u0000\u0000\u0110\u0111\u00059\u0000\u0000\u0111"+
+		"\u0000\u010f\u0110\u0005#\u0000\u0000\u0110\u0111\u0005;\u0000\u0000\u0111"+
 		"\u0112\u0005\u0004\u0000\u0000\u0112\u0113\u0005\u0005\u0000\u0000\u0113"+
-		"\u001f\u0001\u0000\u0000\u0000\u0114\u0115\u00059\u0000\u0000\u0115\u0116"+
-		"\u0005$\u0000\u0000\u0116\u0117\u00059\u0000\u0000\u0117!\u0001\u0000"+
-		"\u0000\u0000\u0118\u0119\u0005%\u0000\u0000\u0119\u011a\u00059\u0000\u0000"+
-		"\u011a\u011b\u0005&\u0000\u0000\u011b\u011c\u0005:\u0000\u0000\u011c\u011d"+
+		"\u001f\u0001\u0000\u0000\u0000\u0114\u0115\u0005;\u0000\u0000\u0115\u0116"+
+		"\u0005$\u0000\u0000\u0116\u0117\u0005;\u0000\u0000\u0117!\u0001\u0000"+
+		"\u0000\u0000\u0118\u0119\u0005%\u0000\u0000\u0119\u011a\u0005;\u0000\u0000"+
+		"\u011a\u011b\u0005&\u0000\u0000\u011b\u011c\u0005<\u0000\u0000\u011c\u011d"+
 		"\u0005\'\u0000\u0000\u011d\u011e\u0005\u0002\u0000\u0000\u011e\u0127\u0005"+
 		"\b\u0000\u0000\u011f\u0124\u0003\u0012\t\u0000\u0120\u0121\u0005 \u0000"+
 		"\u0000\u0121\u0123\u0003\u0012\t\u0000\u0122\u0120\u0001\u0000\u0000\u0000"+
@@ -2307,7 +2341,7 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0126\u0124\u0001\u0000\u0000\u0000\u0127\u011f\u0001\u0000\u0000\u0000"+
 		"\u0127\u0128\u0001\u0000\u0000\u0000\u0128\u0129\u0001\u0000\u0000\u0000"+
 		"\u0129\u012a\u0005\t\u0000\u0000\u012a#\u0001\u0000\u0000\u0000\u012b"+
-		"\u012c\u00059\u0000\u0000\u012c\u012d\u0005&\u0000\u0000\u012d\u012e\u0003"+
+		"\u012c\u0005;\u0000\u0000\u012c\u012d\u0005&\u0000\u0000\u012d\u012e\u0003"+
 		"\u0012\t\u0000\u012e\u012f\u0005\'\u0000\u0000\u012f%\u0001\u0000\u0000"+
 		"\u0000\u0130\u0131\u0005(\u0000\u0000\u0131\u0132\u0005\u0004\u0000\u0000"+
 		"\u0132\u0133\u0003\u0012\t\u0000\u0133\u0134\u0005\u0005\u0000\u0000\u0134"+
@@ -2331,32 +2365,39 @@ public class ProgramacionNinosParser extends Parser {
 		"\u0000\u0000\u0000\u0153\u0151\u0001\u0000\u0000\u0000\u0154\u0155\u0005"+
 		",\u0000\u0000\u0155+\u0001\u0000\u0000\u0000\u0156\u0157\u0005-\u0000"+
 		"\u0000\u0157-\u0001\u0000\u0000\u0000\u0158\u0159\u0005.\u0000\u0000\u0159"+
-		"\u015a\u00059\u0000\u0000\u015a\u015b\u0005/\u0000\u0000\u015b\u0165\u0003"+
-		"\u0012\t\u0000\u015c\u015d\u00050\u0000\u0000\u015d\u015e\u00059\u0000"+
+		"\u015a\u0005;\u0000\u0000\u015a\u015b\u0005/\u0000\u0000\u015b\u0165\u0003"+
+		"\u0012\t\u0000\u015c\u015d\u00050\u0000\u0000\u015d\u015e\u0005;\u0000"+
 		"\u0000\u015e\u015f\u00051\u0000\u0000\u015f\u0165\u0003\u0012\t\u0000"+
-		"\u0160\u0161\u00052\u0000\u0000\u0161\u0165\u00059\u0000\u0000\u0162\u0163"+
-		"\u00053\u0000\u0000\u0163\u0165\u00059\u0000\u0000\u0164\u0158\u0001\u0000"+
+		"\u0160\u0161\u00052\u0000\u0000\u0161\u0165\u0005;\u0000\u0000\u0162\u0163"+
+		"\u00053\u0000\u0000\u0163\u0165\u0005;\u0000\u0000\u0164\u0158\u0001\u0000"+
 		"\u0000\u0000\u0164\u015c\u0001\u0000\u0000\u0000\u0164\u0160\u0001\u0000"+
 		"\u0000\u0000\u0164\u0162\u0001\u0000\u0000\u0000\u0165/\u0001\u0000\u0000"+
 		"\u0000\u0166\u0167\u00054\u0000\u0000\u0167\u0168\u0005\u0004\u0000\u0000"+
 		"\u0168\u0169\u0003\u0012\t\u0000\u0169\u016a\u0005 \u0000\u0000\u016a"+
-		"\u016b\u0003\u0012\t\u0000\u016b\u016c\u0005\u0005\u0000\u0000\u016c\u0183"+
+		"\u016b\u0003\u0012\t\u0000\u016b\u016c\u0005\u0005\u0000\u0000\u016c\u018f"+
 		"\u0001\u0000\u0000\u0000\u016d\u016e\u00055\u0000\u0000\u016e\u016f\u0005"+
 		"\u0004\u0000\u0000\u016f\u0170\u0003\u0012\t\u0000\u0170\u0171\u0005 "+
 		"\u0000\u0000\u0171\u0172\u0003\u0012\t\u0000\u0172\u0173\u0005\u0005\u0000"+
-		"\u0000\u0173\u0183\u0001\u0000\u0000\u0000\u0174\u0175\u00056\u0000\u0000"+
+		"\u0000\u0173\u018f\u0001\u0000\u0000\u0000\u0174\u0175\u00056\u0000\u0000"+
 		"\u0175\u0176\u0005\u0004\u0000\u0000\u0176\u0177\u0003\u0012\t\u0000\u0177"+
 		"\u0178\u0005 \u0000\u0000\u0178\u0179\u0003\u0012\t\u0000\u0179\u017a"+
-		"\u0005\u0005\u0000\u0000\u017a\u0183\u0001\u0000\u0000\u0000\u017b\u017c"+
+		"\u0005\u0005\u0000\u0000\u017a\u018f\u0001\u0000\u0000\u0000\u017b\u017c"+
 		"\u00057\u0000\u0000\u017c\u017d\u0005\u0004\u0000\u0000\u017d\u017e\u0003"+
 		"\u0012\t\u0000\u017e\u017f\u0005 \u0000\u0000\u017f\u0180\u0003\u0012"+
-		"\t\u0000\u0180\u0181\u0005\u0005\u0000\u0000\u0181\u0183\u0001\u0000\u0000"+
-		"\u0000\u0182\u0166\u0001\u0000\u0000\u0000\u0182\u016d\u0001\u0000\u0000"+
-		"\u0000\u0182\u0174\u0001\u0000\u0000\u0000\u0182\u017b\u0001\u0000\u0000"+
-		"\u0000\u01831\u0001\u0000\u0000\u0000\u0184\u0185\u00058\u0000\u0000\u0185"+
-		"\u0186\u0005;\u0000\u0000\u01863\u0001\u0000\u0000\u0000\u001e7Ogpt~\u008b"+
-		"\u009c\u00ab\u00b6\u00b8\u00ca\u00d2\u00d4\u00dd\u00eb\u00ee\u00f6\u00fb"+
-		"\u00fd\u0108\u0124\u0127\u0138\u0141\u0145\u0147\u0151\u0164\u0182";
+		"\t\u0000\u0180\u0181\u0005\u0005\u0000\u0000\u0181\u018f\u0001\u0000\u0000"+
+		"\u0000\u0182\u0183\u00058\u0000\u0000\u0183\u0184\u0005\u0004\u0000\u0000"+
+		"\u0184\u0185\u0003\u0012\t\u0000\u0185\u0186\u0005 \u0000\u0000\u0186"+
+		"\u0187\u0003\u0012\t\u0000\u0187\u0188\u0005\u0005\u0000\u0000\u0188\u018f"+
+		"\u0001\u0000\u0000\u0000\u0189\u018a\u00059\u0000\u0000\u018a\u018b\u0005"+
+		"\u0004\u0000\u0000\u018b\u018c\u0003\u0012\t\u0000\u018c\u018d\u0005\u0005"+
+		"\u0000\u0000\u018d\u018f\u0001\u0000\u0000\u0000\u018e\u0166\u0001\u0000"+
+		"\u0000\u0000\u018e\u016d\u0001\u0000\u0000\u0000\u018e\u0174\u0001\u0000"+
+		"\u0000\u0000\u018e\u017b\u0001\u0000\u0000\u0000\u018e\u0182\u0001\u0000"+
+		"\u0000\u0000\u018e\u0189\u0001\u0000\u0000\u0000\u018f1\u0001\u0000\u0000"+
+		"\u0000\u0190\u0191\u0005:\u0000\u0000\u0191\u0192\u0005=\u0000\u0000\u0192"+
+		"3\u0001\u0000\u0000\u0000\u001e7Ogpt~\u008b\u009c\u00ab\u00b6\u00b8\u00ca"+
+		"\u00d2\u00d4\u00dd\u00eb\u00ee\u00f6\u00fb\u00fd\u0108\u0124\u0127\u0138"+
+		"\u0141\u0145\u0147\u0151\u0164\u018e";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

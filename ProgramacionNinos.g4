@@ -110,6 +110,9 @@ funcionMatematica: 'sumar' '(' expresion ',' expresion ')'
                  | 'restar' '(' expresion ',' expresion ')'
                  | 'multiplicar' '(' expresion ',' expresion ')'
                  | 'dividir' '(' expresion ',' expresion ')'
+                 | 'elevar' '(' expresion ',' expresion ')'    
+    		     | 'cuadrado' '(' expresion ')'
+
 ;
 
 // Comentarios
