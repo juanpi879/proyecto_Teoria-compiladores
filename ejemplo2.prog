@@ -1,0 +1,20 @@
+variable suma = sumar(5, 7)       
+imprimir(suma)
+
+variable resta = restar(10, 4)
+imprimir(resta)
+
+variable multiplicacion = multiplicar(3, 6)
+imprimir(multiplicacion)
+
+variable division = dividir(15, 3)
+imprimir(division)
+
+variable x = 2
+variable r = 3
+variable z = cuadrado(x)
+imprimir(z)
+variable w = elevar(2, 3)
+imprimir(w)
+
+
