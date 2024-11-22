@@ -1,0 +1,7 @@
+variable x = 4
+variable z = 9
+si (no (x > 3)) {
+    imprimir("No mayor")
+} sino {
+    imprimir("Mayor")
+}
